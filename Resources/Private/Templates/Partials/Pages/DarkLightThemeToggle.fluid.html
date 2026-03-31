@@ -1,0 +1,6 @@
+<f:variable name="darkLightToggle" value="{settings.camino.darkLightToggle}" />
+<f:if condition="{{darkLightToggle.position} && {darkLightToggle.position} == {pagePosition}}">
+    <f:if condition="{darkLightToggle.type && darkLightToggle.type != '__none__'}">
+        <f:render partial="ThemeToggle/{darkLightToggle.type}"/>
+    </f:if>
+</f:if>

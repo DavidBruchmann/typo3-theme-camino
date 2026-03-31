@@ -1,0 +1,44 @@
+categories:
+  camino: ~
+  camino.darkLightToggle:
+    label: 'Toggle dark / light'
+    parent: camino
+
+settings:
+  camino.colorScheme:
+    default: theme-caramel-cream
+    type: string
+    enum:
+      - theme-caramel-cream
+      - theme-ocean-breeze
+      - theme-forest-mist
+      - theme-violet-velvet
+    category: camino
+  camino.header.fixedPosition:
+    default: false
+    type: bool
+    category: camino
+  camino.darkLightToggle.type:
+    default: ''
+    type: string
+    enum:
+      - __none__
+      - OneButtonTwoOptions
+      - OneButtonThreeOptions
+      - TwoButtons
+      - ThreeButtons
+    category: camino.darkLightToggle
+  camino.darkLightToggle.iconType:
+    default: UTF8
+    type: string
+    enum:
+      - UTF8
+      - SVG
+    category: camino.darkLightToggle
+  camino.darkLightToggle.position:
+    default: 'right'
+    type: string
+    enum:
+      - left
+      - right
+    category: camino.darkLightToggle

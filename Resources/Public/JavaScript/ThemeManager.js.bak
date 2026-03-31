@@ -1,0 +1,181 @@
+/*
+ * This file is part of the TYPO3 CMS project.
+ *
+ * It is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License, either version 2
+ * of the License, or any later version.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * The TYPO3 project - inspiring people to share!
+ */
+
+/**
+ * Class to handle the toggle for dark/light modes
+ *
+ * The class has a static bootstrap method which
+ * returns an object, but it can be instantiated
+ * differently when the parameters are known,
+ * look in the constructor method about options.
+ *
+ * Using the bootstrap method:
+ *     import ThemeManager from './ThemeManager.js';
+ *     const themeObj = ThemeManager.bootstrap();
+ */
+export default class ThemeManager {
+
+    current;
+
+    defaultStorageKey = 'user-theme';
+
+    defaultToggleModes = ['light', 'system', 'dark'];
+
+    modes;
+
+    storageKey;
+
+    theme;
+
+    constructor(config = {}) {
+        this.storageKey = config.storageKey || this.defaultStorageKey;
+        this.modes = config.modes || this.defaultToggleModes;
+        this.theme = this.getTheme();
+        this.init();
+    }
+
+    init() {
+        // 1. Get saved theme or fallback to system
+        const saved = localStorage.getItem(this.storageKey) || 'system';
+        this.apply(saved);
+
+        // 2. Listen for System changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+            if (this.current === 'system') this.apply('system');
+        });
+    }
+
+    /*
+    apply(theme) {
+        this.current = theme;
+        const isDark = theme === 'dark' ||
+            (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+        document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+        localStorage.setItem(this.storageKey, theme);
+
+        // Sync UI (useful if you have multiple toggles on one page)
+        this.syncUI();
+    }
+    */
+
+    apply(theme) {
+        this.current = theme;
+
+        // 1. Set the attribute to the chosen mode so CSS icons can find it
+        document.documentElement.setAttribute('data-theme', theme);
+
+        // 2. Resolve the actual color state for the CSS variables
+        const isDark = theme === 'dark' ||
+            (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+        // 3. Apply a SECOND attribute or a class for the color logic
+        document.documentElement.setAttribute('data-color-mode', isDark ? 'dark' : 'light');
+
+        localStorage.setItem(this.storageKey, theme);
+        this.syncUI();
+    }
+
+
+    cycle() {
+        const nextIndex = (this.modes.indexOf(this.current) + 1) % this.modes.length;
+        console.log({
+          0: this.modes.indexOf(this.current),
+          1: nextIndex,
+          2: this.modes[nextIndex],
+        });
+        this.apply(this.modes[nextIndex]);
+    }
+
+    syncUI() {
+        // Sync radio buttons
+        document.querySelectorAll(`input[name="theme"][value="${this.current}"]`)
+            .forEach(input => input.checked = true);
+
+        // Sync checkboxes (for 2-state toggle)
+        document.querySelectorAll('input[type="checkbox"][name="theme-toggle"]')
+            .forEach(cb => cb.checked = (this.current === 'dark'));
+    }
+
+    addEventListener() {
+        document.addEventListener('click', (e) => {
+            // For Cycle Buttons
+            if (e.target.closest('.theme-toggle-single')) {
+                e.preventDefault();
+                this.cycle();
+            }
+            // For Radio Buttons (Event Delegation)
+            if (e.target.name === 'theme') {
+                this.apply(e.target.value);
+            }
+        });
+    }
+
+    getTheme() {
+        return ThemeManager._getTheme();
+    }
+
+    static _getTheme() {
+        const el = document.querySelector('.theme-toggle');
+        if (!el) return null;
+
+        let themeClass, cssClass, jsClass, details = [];
+        el.classList.forEach((currentClass) => {
+            if (currentClass.indexOf('theme-toggle-') === 0) {
+                cssClass = currentClass;
+            }
+            if (currentClass.indexOf('js-') === 0) {
+                jsClass = currentClass;
+                const regexp = /^js-([1-3])btn-([2-3])opt$/;
+                details = [...jsClass.match(regexp)];
+            }
+        });
+        return {
+            'cssClass': cssClass,
+            'jsClass': jsClass,
+            'details': {
+                'buttons': (details[1] ?? undefined),
+                'options': (details[2] ?? undefined),
+            }
+        };
+    }
+
+    static bootstrap() {
+        const currentTheme = ThemeManager._getTheme();
+        let modes;
+        if (currentTheme.details.options) {
+            if (currentTheme.details.options == 3) {
+                modes = ['light', 'system', 'dark'];
+            } else if (currentTheme.details.options == 2) {
+                modes = ['light', 'dark'];
+            }
+        }
+        const theme = new ThemeManager({
+            modes: modes
+        });
+        theme.addEventListener();
+        return theme;
+    }
+
+    static resetStorage() {
+      // Remove the manual override from storage
+      localStorage.removeItem(this.storageKey);
+      // Re-apply the 'system' theme (or your default)
+      // This triggers the logic to check window.matchMedia
+      this.apply('system');
+      // Update the UI to reflect the reset
+      this.syncUI();
+      console.log('Theme preference reset to System default.');
+  }
+
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="EXT:theme_camino/Configuration/Sets/camino/labels.xlf" date="2025-12-05T08:00:00Z" product-name="camino">
+    <header/>
+    <body>
+      <trans-unit id="label">
+        <source>Theme Camino</source>
+      </trans-unit>
+      <trans-unit id="categories.camino">
+        <source>Theme Camino</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.colorScheme">
+        <source>Color Scheme</source>
+      </trans-unit>
+      <trans-unit id="settings.description.camino.colorScheme">
+        <source>Select the main color scheme</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.colorScheme.enum.theme-caramel-cream">
+        <source>Caramel Cream</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.colorScheme.enum.theme-ocean-breeze">
+        <source>Ocean Breeze</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.colorScheme.enum.theme-forest-mist">
+        <source>Forest Mist</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.colorScheme.enum.theme-violet-velvet">
+        <source>Violet Velvet</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.header.fixedPosition">
+        <source>Header: Fixed position</source>
+      </trans-unit>
+      <trans-unit id="settings.description.camino.header.fixedPosition">
+        <source>If set, the header is always positioned at the top, which means it always stays in the same place even if the page is scrolled.</source>
+      </trans-unit>
+
+      <trans-unit id="settings.camino.darkLightToggle.type">
+        <source>Toggle for dark/light mode</source>
+      </trans-unit>
+      <trans-unit id="settings.description.camino.darkLightToggle.type">
+        <source>Select the toggle variant to show for dark/light mode. By default no toggle is shown.</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkLightToggle.type.enum.__none__">
+        <source>None (disable toggle)</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkLightToggle.type.enum.OneButtonTwoOptions">
+        <source>1 button, 2 options (☀️ light, 🌙 dark)</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkLightToggle.type.enum.OneButtonThreeOptions">
+        <source>1 buttton, 3 options (☀️ light, 🌗 system, 🌙 dark)</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkLightToggle.type.enum.TwoButtons">
+        <source>2 buttons (☀️ light, 🌙 dark)</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkLightToggle.type.enum.ThreeButtons">
+        <source>3 buttons (☀️ light, 🌗 system, 🌙 dark)</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkLightToggle.iconType">
+        <source>Icon Type</source>
+      </trans-unit>
+      <trans-unit id="settings.description.camino.darkLightToggle.iconType">
+        <source>You can select between UTF-8 icons (☀️, 🌗, 🌙) and SVG icons for
+        the toggle. SVG icons are mono-color but are displayed according to the
+        user-selected brightness-mode in black or white.</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkLightToggle.iconType.enum.UTF8">
+        <source>UTF8, usually with colors</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkLightToggle.iconType.enum.SVG">
+        <source>SVG, mono-color</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkLightToggle.position">
+        <source>Position</source>
+      </trans-unit>
+      <trans-unit id="settings.description.camino.darkLightToggle.position">
+        <source>Position of the brightness toggle relative to the language menu.</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkLightToggle.position.enum.left">
+        <source>Left beside language menu</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkLightToggle.position.enum.right">
+        <source>Right beside language menu</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

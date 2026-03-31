@@ -1,0 +1,30 @@
+<f:variable name="iconType" value="{settings.camino.darkLightToggle.iconType}"/>
+<f:variable name="toggleAppearance" value="{f:translate(key: 'toggle.appearance', extensionName: 'themeCamino', default: 'Appearance toggle')}"/>
+<f:variable name="textLightMode" value="{f:translate(key: 'theme.light', extensionName: 'themeCamino', default: 'Light mode')}"/>
+<f:variable name="textSystemMode" value="{f:translate(key: 'theme.system', extensionName: 'themeCamino', default: 'System mode')}"/>
+<f:variable name="textDarkMode" value="{f:translate(key: 'theme.dark', extensionName: 'themeCamino', default: 'Dark mode')}"/>
+<div class="theme-toggle theme-toggle-single js-1btn-3opt">
+    <fieldset class="theme-switcher">
+        <legend class="sr-only" id="theme-switcher-label">
+            <f:translate key="LLL:EXT:theme_camino/Resources/Private/Language/locallang.xlf:appearance.label" default="Appearance" extensionName="themeCamino" />
+        </legend>
+        <label class="theme-option">
+            <button type="button" class="theme-toggle theme-toggle-single js-1btn-3opt" aria-live="polite" aria-label="{toggleAppearance}" data-tooltip="{textSystemMode}">
+                <f:if condition="{iconType} && {iconType} == 'UTF8'">
+                    <f:then>
+                        <span class="icon-wrap icon-light UTF8" aria-hidden="true" data-tooltip="{textLightMode}">☀️</span>
+                        <span class="icon-wrap icon-system UTF8" aria-hidden="true" data-tooltip="{textSystemMode}">🌗</span>
+                        <span class="icon-wrap icon-dark UTF8" aria-hidden="true" data-tooltip="{textDarkMode}">🌙</span>
+                    </f:then>
+                    <f:else>
+                        <span class="icon-wrap icon-light SVG" aria-hidden="true" data-tooltip="{textLightMode}"><f:render partial="Icon" arguments="{icon: 'actions-brightness-high'}"/></span>
+                        <span class="icon-wrap icon-system SVG" aria-hidden="true" data-tooltip="{textSystemMode}"><f:render partial="Icon" arguments="{icon: 'actions-circle-half'}"/></span>
+                        <span class="icon-wrap icon-dark SVG" aria-hidden="true" data-tooltip="{textDarkMode}"><f:render partial="Icon" arguments="{icon: 'actions-moon'}"/></span>
+                    </f:else>
+                </f:if>
+                <span class="sr-only">{toggleAppearance}</span>
+            </button>
+        </label>
+    </fieldset>
+</div>
+

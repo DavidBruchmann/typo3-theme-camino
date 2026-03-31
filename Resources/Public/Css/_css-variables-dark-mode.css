@@ -1,0 +1,74 @@
+/* TODO: adjust colors or use variable */
+:root[data-color-mode="dark"] {
+    --color-primary-75: #DD997C;
+    --color-primary-100: #B45023;
+}
+
+/* TODO: adjust colors or use variable */
+html[data-color-mode="dark"] .theme-ocean-breeze {
+    --color-primary-75: #78BCFF;
+    --color-primary-100: #0068CE;
+}
+
+/* TODO: adjust colors or use variable */
+html[data-color-mode="dark"] .theme-forest-mist {
+    --color-primary-75: #86B6A6;
+    --color-primary-100: #266D55;
+}
+
+/* TODO: adjust colors or use variable */
+html[data-color-mode="dark"] .theme-violet-velvet {
+    --color-primary-75: #D0B4FF;
+    --color-primary-100: #6E1AFF;
+}
+
+html[data-color-mode="dark"] {
+    --color-neutral-0: #000000;
+    --color-neutral-10: var(--static-color-neutral-90);
+    --color-neutral-20: var(--static-color-neutral-80);
+    --color-neutral-30: var(--static-color-neutral-70);
+    --color-neutral-40: var(--static-color-neutral-60);
+    --color-neutral-50: var(--static-color-neutral-50);
+    --color-neutral-60: var(--static-color-neutral-40);
+    --color-neutral-70: var(--static-color-neutral-30);
+    --color-neutral-80: var(--static-color-neutral-20);
+    --color-neutral-90: var(--static-color-neutral-10);
+}
+
+[data-color-mode="dark"] {
+    --background-color: var(--color-neutral-20) !important;
+    --text-color: var(--color-neutral-90) !important;
+    --text-color-highlight: var(--color-neutral-70) !important;
+
+    --link-color: var(--color-neutral-90) !important;
+    --link-color-hover: var(--color-neutral-80) !important;
+}
+
+[data-color-mode="dark"] body {
+    background-color: var(--background-color) !important;
+}
+
+[data-color-mode="dark"] .header__language-menu {
+    --link-color: var(--static-color-neutral-80) !important; /*--static-color-primary-100);*/
+    --link-color-hover: var(--static-color-neutral-70) !important;
+
+    color: var(--static-color-neutral-80) !important;
+    background: var(--static-color-neutral-10) !important;
+}
+/*
+*/
+@media (min-width: 1280px) {
+    [data-color-mode="dark"] .header__nav {
+        --link-color: var(--static-color-neutral-0) !important;
+        --link-color-hover: var(--static-color-neutral-10) !important;
+    }
+
+    [data-color-mode="dark"] .header__language-button-icon {
+        color: var(--static-color-neutral-10) !important;
+    }
+
+    [data-color-mode="dark"] .header__subnav {
+        --link-color: var(--color-primary-100) !important;
+        --link-color-hover: var(--color-neutral-70) !important;
+    }
+}

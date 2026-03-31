@@ -1,0 +1,35 @@
+<f:variable name="iconType" value="{settings.camino.darkLightToggle.iconType}"/>
+<f:variable name="textLightMode" value="{f:translate(key: 'theme.light', extensionName: 'themeCamino', default: 'Light mode')}"/>
+<f:variable name="textSystemMode" value="{f:translate(key: 'theme.system', extensionName: 'themeCamino', default: 'System mode')}"/>
+<f:variable name="textDarkMode" value="{f:translate(key: 'theme.dark', extensionName: 'themeCamino', default: 'Dark mode')}"/>
+<div class="theme-toggle theme-toggle-three-buttons js-3btn-3opt">
+    <fieldset class="theme-switcher" role="radiogroup" aria-labelledby="theme-switcher-label">
+        <legend class="sr-only" id="theme-switcher-label">
+            <f:translate key="appearance.label" default="Appearance" extensionName="themeCamino" />
+        </legend>
+        <label class="theme-option" data-tooltip="{textLightMode}">
+            <input type="radio" name="theme" value="light" aria-label="{textLightMode}" />
+            <f:if condition="{iconType} && {iconType} == 'UTF8'">
+                <f:then><span class="icon-wrap icon-light utf8" aria-hidden="true">☀️</span></f:then>
+                <f:else><span class="icon-wrap icon-light SVG" aria-hidden="true"><f:render partial="Icon" arguments="{icon: 'actions-brightness-high'}"/></span></f:else>
+            </f:if>
+            <span class="sr-only">{textLightMode}</span>
+        </label>
+        <label class="theme-option" data-tooltip="{textSystemMode}">
+            <input type="radio" name="theme" value="system" aria-label="{textSystemMode}" />
+            <f:if condition="{iconType} && {iconType} == 'UTF8'">
+                <f:then><span class="icon-wrap icon-system utf8" aria-hidden="true">🌗</span></f:then>
+                <f:else><span class="icon-wrap icon-system SVG" aria-hidden="true"><f:render partial="Icon" arguments="{icon: 'actions-circle-half'}"/></span></f:else>
+            </f:if>
+            <span class="sr-only">{textSystemMode}</span>
+        </label>
+        <label class="theme-option" data-tooltip="{textDarkMode}">
+            <input type="radio" name="theme" value="dark" aria-label="{textDarkMode}" />
+            <f:if condition="{iconType} && {iconType} == 'UTF8'">
+                <f:then><span class="icon-wrap icon-dark utf8" aria-hidden="true">🌙</span></f:then>
+                <f:else><span class="icon-wrap icon-dark SVG" aria-hidden="true"><f:render partial="Icon" arguments="{icon: 'actions-moon'}"/></span></f:else>
+            </f:if>
+            <span class="sr-only">{textDarkMode}</span>
+        </label>
+    </fieldset>
+</div>

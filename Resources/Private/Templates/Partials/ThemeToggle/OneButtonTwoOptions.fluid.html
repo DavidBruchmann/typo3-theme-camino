@@ -1,0 +1,25 @@
+<f:variable name="iconType" value="{settings.camino.darkLightToggle.iconType}"/>
+<f:variable name="toggleAppearance" value="{f:translate(key: 'toggle.appearance', extensionName: 'themeCamino', default: 'Appearance toggle')}"/>
+<f:variable name="textLightMode" value="{f:translate(key: 'theme.light', extensionName: 'themeCamino', default: 'Light mode')}"/>
+<f:variable name="textDarkMode" value="{f:translate(key: 'theme.dark', extensionName: 'themeCamino', default: 'Dark mode')}"/>
+<div class="theme-toggle theme-toggle-single js-1btn-2opt">
+    <fieldset class="theme-switcher">
+        <legend class="sr-only" id="theme-switcher-label">
+            <f:translate key="LLL:EXT:theme_camino/Resources/Private/Language/locallang.xlf:appearance.label" default="Appearance" extensionName="themeCamino" />
+        </legend>
+        <label class="theme-option">
+            <input type="checkbox" id="theme-checkbox" name="theme-toggle" aria-label="{toggleAppearance}">
+            <f:if condition="{iconType} && {iconType} == 'UTF8'">
+                <f:then>
+                    <span class="icon-wrap icon-light UTF8" aria-hidden="true" data-tooltip="{textLightMode}">☀️</span>
+                    <span class="icon-wrap icon-dark UTF8" aria-hidden="true" data-tooltip="{textDarkMode}">🌙</span>
+                </f:then>
+                <f:else>
+                    <span class="icon-wrap icon-light SVG" aria-hidden="true" data-tooltip="{textLightMode}"><f:render partial="Icon" arguments="{icon: 'actions-brightness-high'}"/></span>
+                    <span class="icon-wrap icon-dark SVG" aria-hidden="true" data-tooltip="{textDarkMode}"><f:render partial="Icon" arguments="{icon: 'actions-moon'}"/></span>
+                </f:else>
+            </f:if>
+            <span class="sr-only js-theme-status" aria-live="polite">{toggleAppearance}</span>
+        </label>
+    </fieldset>
+</div>

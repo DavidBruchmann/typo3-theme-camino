@@ -1,0 +1,283 @@
+/* show toogle only if JS is enabled */
+html.js-ready .theme-toggle { display: inline-flex; }
+
+/* Container for the tooltip */
+[data-tooltip] {
+    position: relative;
+}
+
+/* Tooltip Styling */
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    /* bottom: 125%; Position above the icon */
+    top: 50%;
+    left: 150%;
+    transform: translateX(-50%) scale(0.8);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    pointer-events: none; /* Don't interfere with clicks */
+    z-index: 100;
+}
+
+/* Show on Hover OR Focus-Visible */
+[data-tooltip]:hover::after,
+[data-tooltip]:focus-within::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scale(1);
+    left: -70%;
+    top: 70%;
+}
+
+.theme-toggle .icon-wrap.SVG {
+    padding: 10px 12px;
+}
+.theme-toggle .icon-markup {
+    line-height: 28px;
+    height: 28px;
+    overflow: hidden;
+}
+.theme-toggle .icon-wrap.SVG svg {
+    width: 28px;
+    height: 28px;
+}
+.theme-toggle .icon-system.SVG .icon-markup {
+    line-height: 20px;
+    height: 20px;
+    overflow: hidden;
+}
+/*
+.theme-toggle .icon-system.SVG svg {
+    width: 20px;
+    height: 20px;
+}
+*/
+
+/* --- Container --- */
+.theme-toggle fieldset.theme-switcher {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: var(--corners-m);
+    /*
+    border: 1px solid transparent;
+    color: var(--color-neutral-0);
+    */
+    background-color: transparent;
+    margin-bottom: 0;
+    /*
+    overflow: hidden;
+    */
+}
+
+.theme-toggle fieldset label {
+    margin-bottom: 0;
+}
+.theme-toggle-single .theme-switcher {
+
+}
+button.theme-toggle {
+
+    border: 1px solid transparent;
+    box-shadow: none !important;
+
+    /* 2. Ensure it doesn't reappear on click */
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/* --- Base Icon Styles --- */
+.theme-switcher .icon-wrap {
+    padding: 10px 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    border-radius: calc(var(--corners-m) - 2px); /* Matches container inner radius */
+}
+
+/*
+.theme-toggle-single .theme-switcher .icon-wrap {
+    padding: 10px 12px;
+}
+*/
+/* 1. Base style for the single button toggle */
+.theme-toggle-single {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    transition: background-color 0.2s ease;
+}
+
+/*
+*/
+
+/* 2. Highlight the button based on the GLOBAL state */
+/* If the site is NOT in system mode, show the "active" background */
+html[data-theme="light"] .theme-toggle-single,
+html[data-theme="dark"] .theme-toggle-single {
+    /* background-color: rgb(from var(--color-neutral-20) r g b / 0.25);
+    border-color: #fff; */
+}
+
+/* 3. If you want a specific color for 'System' mode */
+html[data-theme="system"] .theme-toggle-single {
+}
+
+.theme-toggle-single {
+    border-radius: calc(var(--corners-m) - 2px);
+}
+.theme-toggle-single .icon-light {
+    /* for older browsers */
+    background-color: radial-gradient(
+        circle,
+        color-mix(in srgb, var(--static-color-neutral-80), transparent 55%),
+        color-mix(in srgb, var(--static-color-neutral-20), transparent 60%)
+    ) !important;
+    /* for modern browsers */
+    background-color: radial-gradient(
+        circle,
+        rgb(from var(--static-color-neutral-80) r g b / 0.25) 30%,
+        rgb(from var(--static-color-neutral-20) r g b / 0.50) 100%
+    ) !important;
+}
+
+/* --- The 1-Button "Stack" Logic --- */
+/* If icons are children of the same button, stack them on top of each other */
+.theme-toggle-single .icon-container {
+    display: grid;
+    place-items: center;
+}
+
+.theme-toggle-single .icon-wrap {
+    display: none;
+}
+/*
+*/
+
+/* --- State-based Visibility --- */
+[data-theme="light"] .theme-toggle .icon-light,
+[data-theme="dark"] .theme-toggle .icon-dark,
+[data-theme="system"] .theme-toggle .icon-system {
+    display: inline-flex;
+    animation: icon-in 0.2s ease-out;
+    filter: saturate(200%) contrast(150%);
+}
+
+.theme-switcher input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    /*
+    overflow: hidden;
+    */
+    pointer-events: none;
+}
+
+/* --- Accessibility & Focus --- */
+.theme-switcher:focus-within {
+    border-color: #fff;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    outline: 1px solid #fff;
+    border-radius: calc(var(--corners-m) - 2px);
+}
+
+/* For Radio Buttons (3-btn) and Checkboxes (1-btn)*/
+.theme-switcher input:checked + .icon-wrap {
+    background-color: rgb(from var(--color-neutral-20) r g b / 0.25) !important;
+}
+.theme-switcher input:checked + .icon-light {
+    /* for older browsers */
+    background-color: radial-gradient(
+        circle,
+        transparent,
+        color-mix(in srgb, var(--color-neutral-80), transparent 60%),
+        color-mix(in srgb, var(--color-neutral-20), transparent 75%)
+    ) !important;
+    /* for modern browsers */
+    background-color: radial-gradient(
+        circle,
+        rgb(from var(--color-neutral-80) r g b / 0.25) 30%,
+        rgb(from var(--color-neutral-20) r g b / 0.50) 100%
+    ) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.theme-switcher input:checked + .icon-wrap.utf8 {
+    filter: saturate(200%) contrast(150%);
+}
+
+.theme-switcher input:focus-visible + .icon-wrap {
+    outline: none; /* Hide default browser ring since container shows focus */
+}
+
+button.theme-toggle {
+    all: unset; /* Resets all inherited and non-inherited properties */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+/* Ensure the button is the relative anchor */
+.theme-toggle-single {
+    position: relative;
+}
+
+/* Tooltip shows when the BUTTON is hovered or focused via keyboard */
+.theme-toggle-single:hover::after,
+.theme-toggle-single:focus-visible::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.theme-toggle-single::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    /* ... rest of your tooltip styling ... */
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+
+@keyframes icon-in {
+    from { opacity: 0; transform: scale(0.5) rotate(-15deg); }
+    to { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+/* --- Accessibility --- */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+

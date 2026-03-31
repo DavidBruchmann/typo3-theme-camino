@@ -1,0 +1,223 @@
+/*
+:root[data-theme="dark"],
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="system"] {
+        --color-primary-75: #DD997C;
+        --color-primary-100: #B45023;
+
+        --color-neutral-0: #000000;
+        --color-neutral-10: #220B01;
+        --color-neutral-20: #49362D;
+        --color-neutral-30: #6C5246;
+        --color-neutral-40: #887167;
+        --color-neutral-50: #AB978E;
+        --color-neutral-60: #BCA59A;
+        --color-neutral-70: #D0BFB7;
+        --color-neutral-80: #ECDFD9;
+        --color-neutral-90: #FBF2EE;
+    }
+}
+*/
+
+:root[data-color-mode="dark"] {
+    --color-primary-75: #DD997C;
+    --color-primary-100: #B45023;
+
+    --color-neutral-0: #000000;
+    --color-neutral-10: #220B01;
+    --color-neutral-20: #49362D;
+    --color-neutral-30: #6C5246;
+    --color-neutral-40: #887167;
+    --color-neutral-50: #AB978E;
+    --color-neutral-60: #BCA59A;
+    --color-neutral-70: #D0BFB7;
+    --color-neutral-80: #ECDFD9;
+    --color-neutral-90: #FBF2EE;
+}
+
+html[data-color-mode="dark"] .theme-ocean-breeze {
+    --color-primary-75: #78BCFF;
+    --color-primary-100: #0068CE;
+
+    --color-neutral-0: #000000;
+    --color-neutral-10: #011022;
+    --color-neutral-20: #2D3A49;
+    --color-neutral-30: #46576C;
+    --color-neutral-40: #677688;
+    --color-neutral-50: #8E9BAB;
+    --color-neutral-60: #9AA9BC;
+    --color-neutral-70: #B7C2D0;
+    --color-neutral-80: #D9E2EC;
+    --color-neutral-90: #EBF0F5;
+}
+
+html[data-color-mode="dark"] .theme-forest-mist {
+    --color-primary-75: #86B6A6;
+    --color-primary-100: #266D55;
+
+    --color-neutral-0: #000000;
+    --color-neutral-10: #220E01;
+    --color-neutral-20: #443B35;
+    --color-neutral-30: #51463F;
+    --color-neutral-40: #7B746F;
+    --color-neutral-50: #9F9893;
+    --color-neutral-60: #B3AEAA;
+    --color-neutral-70: #CCCAC8;
+    --color-neutral-80: #E3DEDA;
+    --color-neutral-90: #EDEBE9;
+}
+
+html[data-color-mode="dark"] .theme-violet-velvet {
+    --color-primary-75: #D0B4FF;
+    --color-primary-100: #6E1AFF;
+
+    --color-neutral-0: #000000;
+    --color-neutral-10: #0D0122;
+    --color-neutral-20: #3A3544;
+    --color-neutral-30: #463F51;
+    --color-neutral-40: #736F7B;
+    --color-neutral-50: #97939F;
+    --color-neutral-60: #AEAAB3;
+    --color-neutral-70: #CAC8CC;
+    --color-neutral-80: #D7D5DB;
+    --color-neutral-90: #F0EFF2;
+}
+
+.theme-toggle {
+    color: var(--color-neutral-90);
+}
+.theme-toggle-one-button {
+
+}
+.theme-toggle-two-buttons {
+
+}
+.theme-toggle-three-buttons {
+
+}
+fieldset.theme-switcher {
+	width: auto;
+	display: inline-flex;
+	border: 1px solid rgba(255, 255, 255, 0.35);
+	border-radius: var(--corners-m);
+	background: transparent;
+	color: var(--color-neutral-0);
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.theme-switcher input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-switcher label {
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.theme-switcher input + .icon {
+    padding:10px 8px;
+    display: inline-block;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    background-color: transparent;
+    color: inherit;
+}
+
+.theme-switcher input:checked + .icon {
+    background: rgb(from var(--color-neutral-20) r g b / 0.25);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: white;
+    transform: scale(1.05);
+}
+
+.theme-switcher input:checked + .icon.utf8 {
+    filter: saturate(200%) contrast(200%);
+}
+
+/* Accessibility: Show a focus ring when tabbing
+.theme-switcher input:focus-visible + .icon {
+  outline: 2px solid #7C3AED;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+*/
+
+/* Focus the whole pill-container instead of the tiny icon */
+.theme-switcher:focus-within {
+  border-color: #fff; /*var(--color-primary-100);*/
+  outline: 2px solid transparent;
+  /*
+	outline: 2px solid var(--color-primary-100);
+	outline-offset: 1px;
+  */
+}
+
+/* Hide the individual icon focus so it doesn't double up */
+.theme-switcher input:focus-visible + .icon {
+  outline: none;
+}
+
+/* Utility class to hide text from sight but keep for screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+/*
+:root[data-theme="light"] {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+*/
+/* Reuse your existing .theme-switcher and .icon styles */
+
+.theme-toggle-one-button input:checked + .icon {
+  background-color: var(--static-primary);
+  color: var(--static-on-primary);
+  /* You could even rotate the icon for an animation effect */
+  transform: rotate(180deg);
+}
+
+/* Ensure the checkbox stays hidden like your radios */
+.theme-toggle-one-button input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Hide all icons by default */
+.theme-toggle-single .icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+.theme-toggle .icon-light,
+.theme-toggle .icon-dark,
+.theme-toggle .icon-system {
+    display: none !important;
+}
+
+/* Show based on the <html> attribute */
+[data-theme="light"] .theme-toggle .icon-light { display: inline-block !important; }
+[data-theme="dark"] .theme-toggle .icon-dark { display: inline-block !important; }
+[data-theme="system"] .theme-toggle .icon-system { display: inline-block !important; }
+
+
+/* Optional: Add a little "pop" animation when it changes */
+@keyframes icon-in {
+  from { opacity: 0; transform: scale(0.5) rotate(-45deg); }
+  to { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+.icon { animation: icon-in 0.2s ease-out; }
+
+

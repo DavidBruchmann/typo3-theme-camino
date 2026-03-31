@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="EXT:theme_camino/Resources/Private/Language/messages.xlf" date="2026-01-13T15:46:30Z" product-name="theme_camino">
+    <header/>
+    <body>
+      <trans-unit id="menu.label">
+        <source>Menu</source>
+      </trans-unit>
+      <trans-unit id="menu.main.label">
+        <source>Main menu</source>
+      </trans-unit>
+      <trans-unit id="menu.language.label">
+        <source>Language menu</source>
+      </trans-unit>
+
+      <trans-unit id="appearance.label">
+        <source>Appearance</source>
+      </trans-unit>
+      <trans-unit id="toggle.appearance">
+        <source>Appearance toggle</source>
+      </trans-unit>
+      <trans-unit id="theme.light">
+        <source>Light mode</source>
+      </trans-unit>
+      <trans-unit id="theme.system">
+        <source>System mode</source>
+      </trans-unit>
+      <trans-unit id="theme.dark">
+        <source>Dark mode</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
