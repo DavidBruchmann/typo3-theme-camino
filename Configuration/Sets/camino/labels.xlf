@@ -34,6 +34,9 @@
         <source>If set, the header is always positioned at the top, which means it always stays in the same place even if the page is scrolled.</source>
       </trans-unit>
 
+      <trans-unit id="categories.camino.darkLightToggle">
+        <source>Toggle dark / light</source>
+      </trans-unit>
       <trans-unit id="settings.camino.darkLightToggle.type">
         <source>Toggle for dark/light mode</source>
       </trans-unit>
@@ -80,6 +83,33 @@
       </trans-unit>
       <trans-unit id="settings.camino.darkLightToggle.position.enum.right">
         <source>Right beside language menu</source>
+      </trans-unit>
+      <trans-unit id="categories.camino.darkMode">
+        <source>Dark Mode</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkMode.colorPriority">
+        <source>Color priority</source>
+      </trans-unit>
+      <trans-unit id="settings.description.camino.darkMode.colorPriority">
+        <source>The first color is for common background in dark mode, the second one for background of special elements.</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkMode.colorPriority.enum.dark-medium">
+        <source>Page-background: dark, special elements: medium</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkMode.colorPriority.enum.medium-dark">
+        <source>Page-background: medium, special elements: dark</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkMode.headerFooterContentColor">
+        <source>Content color in header and footer</source>
+      </trans-unit>
+      <trans-unit id="settings.description.camino.darkMode.headerFooterContentColor">
+        <source>For the best contrast in dark mode either black or white can be chosen for the content in header and footer.</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkMode.headerFooterContentColor.enum.white">
+        <source>white</source>
+      </trans-unit>
+      <trans-unit id="settings.camino.darkMode.headerFooterContentColor.enum.black">
+        <source>black</source>
       </trans-unit>
     </body>
   </file>

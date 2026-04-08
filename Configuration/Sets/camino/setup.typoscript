@@ -3,9 +3,26 @@
 page = PAGE
 page {
   # set color-scheme class to body tag
-  bodyTagCObject = TEXT
+  bodyTagCObject = COA
   bodyTagCObject {
-    data = sitesettings:camino.colorScheme
+    10 = TEXT
+    10 {
+      data = sitesettings:camino.colorScheme
+      noTrimWrap = || |
+    }
+    ## [black | white]
+    20 = TEXT
+    20 {
+      data = sitesettings:camino.darkMode.headerFooterContentColor
+      noTrimWrap = | darkModeHeaderFooterColor-| |
+    }
+    ## priority of darkness 1. page-background, 2. special elements
+    ## [dark-middle | middle-dark]
+    30 = TEXT
+    30 {
+      data = sitesettings:camino.darkMode.colorPriority
+      noTrimWrap = | darkMode-||
+    }
     wrap = <body class=" | ">
   }
   10 =< lib.fluidPage

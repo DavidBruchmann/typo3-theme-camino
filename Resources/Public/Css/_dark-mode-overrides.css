@@ -1,0 +1,648 @@
+[data-color-mode="dark"] body {
+    background-color: var(--background-color);
+}
+
+/**
+ * _component.css
+ */
+[data-color-mode="dark"] body {
+    --background-color: var(--color-neutral-20);
+    --text-color: var(--color-neutral-90);
+    --text-color-highlight: var(--color-neutral-70);
+    /*
+    --link-color: var(--color-neutral-90);
+    --link-color-hover: var(--color-neutral-80);
+    */
+}
+
+/*
+[data-color-mode="dark"] [class*='--bg-10'] {
+    --background-color: var(--color-neutral-10);
+}
+*/
+
+[data-color-mode="dark"] [class*='--bg-80'] {
+    --background-color: var(--color-primary-80);
+    --text-color: var(--color-neutral-0);
+    --text-color-highlight: var(--color-neutral-10);
+    --link-color: var(--color-neutral-0);
+    --link-color-hover: var(--color-neutral-10);
+}
+
+[data-color-mode="dark"] [class*='--bg-100'] {
+    --background-color: var(--color-primary-100);
+    --text-color: var(--color-neutral-0);
+    --text-color-highlight: var(--color-neutral-10);
+    --link-color: var(--color-neutral-0);
+    --link-color-hover: var(--color-neutral-10);
+}
+
+[data-color-mode="dark"] .component {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+/**
+ * _base.css
+ */
+
+[data-color-mode="dark"] body {
+    /* set dynamic default colors. These colors are changed using .theme-<name> classes.*/
+    --link-color: var(--color-primary-100);
+    --link-color-hover: var(--color-neutral-70);
+    --figure-color: var(--color-neutral-70);
+
+    color: var(--text-color);
+}
+
+[data-color-mode="dark"] p,
+[data-color-mode="dark"] ul,
+[data-color-mode="dark"] ol {
+    color: var(--text-color);
+}
+
+[data-color-mode="dark"] a,
+[data-color-mode="dark"] button {
+    color: var(--link-color); /* should be like #FF996B (camino) */
+
+    &:hover:not(:disabled) {
+        color: var(--link-color-hover);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-primary-100);
+        --box-shadow-color: white;
+    }
+}
+
+/**
+ * _icon.css
+ */
+
+[data-color-mode="dark"] .icon {
+    fill: var(--icon-fill);
+    color: var(--icon-color);
+}
+
+/**
+ * _button.css
+ */
+
+[data-color-mode="dark"] body {
+    --button-primary-color: var(--color-primary-100);
+    --button-primary-color-hover: var(--color-neutral-70);
+    --button-primary-color-focus: var(--color-neutral-70);
+    --button-primary-color-pressed: var(--color-neutral-70);
+    --button-primary-content-color: var(--color-neutral-0);
+    --button-primary-content-color-hover: var(--color-neutral-0);
+    --button-primary-content-color-pressed: var(--color-neutral-0);
+    --button-primary-border-color: var(--button-primary-color);
+    --button-primary-border-color-hover: var(--button-primary-color-hover);
+    --button-primary-border-color-pressed: var(--button-primary-color-pressed);
+    --button-primary-content-border-bottom-color: transparent;
+    --button-primary-content-border-bottom-color-hover: transparent;
+
+    --button-secondary-color: transparent;
+    --button-secondary-color-hover: var(--color-primary-100);
+    --button-secondary-color-focus: var(--color-primary-100);
+    --button-secondary-color-pressed: var(--color-primary-100);
+    --button-secondary-content-color: var(--color-primary-100);
+    --button-secondary-content-color-hover: var(--color-neutral-0);
+    --button-secondary-content-color-pressed: var(--color-neutral-0);
+    --button-secondary-border-color: var(--color-primary-100);
+    --button-secondary-border-color-hover: var(--color-primary-100);
+    --button-secondary-border-color-pressed: var(--color-primary-100);
+    --button-secondary-content-border-bottom-color: transparent;
+    --button-secondary-content-border-bottom-color-hover: transparent;
+
+    --button-soft-color: var(--color-primary-75);
+    --button-soft-color-hover: var(--color-neutral-70);
+    --button-soft-color-focus: var(--color-neutral-70);
+    --button-soft-color-pressed: var(--color-neutral-70);
+    --button-soft-content-color: var(--color-neutral-90);
+    --button-soft-content-color-hover: var(--color-neutral-0);
+    --button-soft-content-color-pressed: var(--color-neutral-0);
+    --button-soft-border-color: var(--color-primary-75);
+    --button-soft-border-color-hover: var(--color-neutral-70);
+    --button-soft-border-color-pressed: var(--color-neutral-70);
+    --button-soft-content-border-bottom-color: transparent;
+    --button-soft-content-border-bottom-color-hover: transparent;
+
+    --button-text-color: transparent;
+    --button-text-color-hover: transparent;
+    --button-text-color-focus: transparent;
+    --button-text-color-pressed: transparent;
+    --button-text-content-color: var(--color-primary-100);
+    --button-text-content-color-hover: var(--color-neutral-70);
+    --button-text-content-color-pressed: var(--color-neutral-70);
+    --button-text-border-color: transparent;
+    --button-text-border-color-hover: transparent;
+    --button-text-border-color-pressed: transparent;
+    --button-text-content-border-bottom-color: var(--color-primary-100);
+    --button-text-content-border-bottom-color-hover: var(--color-neutral-70);
+}
+
+[data-color-mode="dark"] [class*='--bg-80'],
+[data-color-mode="dark"] [class*='--bg-100'] {
+    --button-primary-color: var(--color-neutral-10);
+    --button-primary-color-hover: var(--color-neutral-20);
+    --button-primary-color-focus: var(--color-neutral-20);
+    --button-primary-color-pressed: var(--color-neutral-20);
+    --button-primary-content-color: var(--color-primary-100);
+    --button-primary-content-color-hover: var(--color-neutral-80);
+    --button-primary-content-color-pressed: var(--color-neutral-80);
+    --button-primary-border-color: var(--color-neutral-10);
+    --button-primary-border-color-hover: var(--color-neutral-20);
+    --button-primary-border-color-pressed: var(--color-neutral-20);
+
+    --button-secondary-color-hover: var(--color-neutral-10);
+    --button-secondary-color-focus: var(--color-neutral-10);
+    --button-secondary-color-pressed: var(--color-neutral-10);
+    --button-secondary-content-color: var(--color-neutral-0);
+    --button-secondary-content-color-hover: var(--color-neutral-80);
+    --button-secondary-content-color-pressed: var(--color-neutral-80);
+    --button-secondary-border-color: var(--color-neutral-10);
+    --button-secondary-border-color-hover: var(--color-neutral-10);
+    --button-secondary-border-color-pressed: var(--color-neutral-10);
+
+    --button-soft-color-hover: var(--color-neutral-0);
+    --button-soft-color-focus: var(--color-neutral-0);
+    --button-soft-color-pressed: var(--color-neutral-0);
+    --button-soft-content-color-hover: var(--color-neutral-90);
+    --button-soft-content-color-pressed: var(--color-neutral-90);
+    --button-soft-border-color-hover: var(--color-neutral-0);
+    --button-soft-border-color-pressed: var(--color-neutral-0);
+
+    --button-text-content-color: var(--color-neutral-0);
+    --button-text-content-color-hover: var(--color-neutral-20);
+    --button-text-content-color-pressed: var(--color-neutral-20);
+
+    --button-text-content-border-bottom-color: var(--color-neutral-0);
+    --button-text-content-border-bottom-color-hover: var(--color-neutral-20);
+}
+
+[data-color-mode="dark"] .button {
+    --button-color: var(--button-primary-color);
+    --button-color-hover: var(--button-primary-color-hover);
+    --button-color-focus: var(--button-primary-color-focus);
+    --button-color-pressed: var(--button-primary-color-pressed);
+    --button-content-color: var(--button-primary-content-color);
+    --button-content-color-hover: var(--button-primary-content-color-hover);
+    --button-content-color-pressed: var(--button-primary-content-color-pressed);
+    --button-border-color: var(--button-primary-border-color);
+    --button-border-color-hover: var(--button-primary-border-color-hover);
+    --button-border-color-pressed: var(--button-primary-border-color-pressed);
+    --button-content-border-bottom: 2px solid var(--button-content-border-bottom-color);
+
+    --icon-fill: var(--button-content-color);
+
+    border: 2px solid var(--button-border-color);
+    background: var(--button-color);
+    /* TODO: --button-bottom is not defined */
+    bottom: var(--button-bottom);
+
+    &:hover:not(:disabled),
+    &:focus-visible:not(:disabled) {
+        /* changes the color of text and icon */
+        --button-content-color: var(--button-content-color-hover);
+        --button-content-border-bottom-color: var(--button-content-border-bottom-color-hover);
+        --button-color: var(--button-color-hover);
+        --button-border-color: var(--button-border-color-hover);
+    }
+
+    &:active {
+        /* changes the color of text and icon */
+        --button-content-color: var(--button-content-color-pressed);
+        --button-color: var(--button-color-pressed);
+        --button-border-color: var(--button-border-color-pressed);
+    }
+
+    &:focus-visible {
+        border-color: var(--button-border-color);
+        outline: 2px solid var(--button-secondary-color-focus);
+        background: var(--button-color-focus);
+    }
+}
+
+[data-color-mode="dark"] .button--secondary {
+    --button-color: var(--button-secondary-color, var(--button-primary-color));
+    --button-color-hover: var(--button-secondary-color-hover, var(--button-primary-color-hover));
+    --button-color-focus: var(--button-secondary-color-focus, var(--button-primary-color-focus));
+    --button-color-pressed: var(--button-secondary-color-pressed, var(--button-primary-color-pressed));
+    --button-border-color: var(--button-secondary-border-color, var(--button-primary-border-color));
+    --button-border-color-hover: var(--button-secondary-border-color-hover, var(--button-primary-border-color-hover));
+    --button-border-color-pressed: var(--button-secondary-border-color-pressed, var(--button-primary-border-color-pressed));
+    --button-content-color: var(--button-secondary-content-color, var(--button-primary-content-color));
+    --button-content-color-hover: var(--button-secondary-content-color-hover, var(--button-primary-content-color-hover));
+    --button-content-color-pressed: var(--button-secondary-content-color-pressed, var(--button-primary-content-color-pressed));
+    --button-content-border-bottom-color: var(--button-secondary-content-border-bottom-color, var(--button-primary-content-border-bottom-color));
+    --button-content-border-bottom-color-hover: var(--button-secondary-content-border-bottom-color-hover, var(--button-primary-content-border-bottom-color-hover));
+}
+
+[data-color-mode="dark"] .button--soft {
+    --button-color: var(--button-soft-color, var(--button-primary-color));
+    --button-color-hover: var(--button-soft-color-hover, var(--button-primary-color-hover));
+    --button-color-focus: var(--button-soft-color-focus, var(--button-primary-color-focus));
+    --button-color-pressed: var(--button-soft-color-pressed, var(--button-primary-color-pressed));
+    --button-border-color: var(--button-soft-border-color, var(--button-primary-border-color));
+    --button-border-color-hover: var(--button-soft-border-color-hover, var(--button-primary-border-color-hover));
+    --button-border-color-pressed: var(--button-soft-border-color-pressed, var(--button-primary-border-color-pressed));
+    --button-content-color: var(--button-soft-content-color, var(--button-primary-content-color));
+    --button-content-color-hover: var(--button-soft-content-color-hover, var(--button-primary-content-color-hover));
+    --button-content-color-pressed: var(--button-soft-content-color-pressed, var(--button-primary-content-color-pressed));
+    --button-content-border-bottom-color: var(--button-soft-content-border-bottom-color, var(--button-primary-content-border-bottom-color));
+    --button-content-border-bottom-color-hover: var(--button-soft-content-border-bottom-color-hover, var(--button-primary-content-border-bottom-color-hover));
+}
+
+[data-color-mode="dark"] .button--text {
+    --button-color: var(--button-text-color, var(--button-primary-color));
+    --button-color-hover: var(--button-text-color-hover, var(--button-primary-color-hover));
+    --button-color-focus: var(--button-text-color-focus, var(--button-primary-color-focus));
+    --button-color-pressed: var(--button-text-color-pressed, var(--button-primary-color-pressed));
+    --button-border-color: var(--button-text-border-color, var(--button-primary-border-color));
+    --button-border-color-hover: var(--button-text-border-color-hover, var(--button-primary-border-color-hover));
+    --button-border-color-pressed: var(--button-text-border-color-pressed, var(--button-primary-border-color-pressed));
+    --button-content-color: var(--button-text-content-color, var(--button-primary-content-color));
+    --button-content-color-hover: var(--button-text-content-color-hover, var(--button-primary-content-color-hover));
+    --button-content-color-pressed: var(--button-text-content-color-pressed, var(--button-primary-content-color-pressed));
+    --button-content-border-bottom-color: var(--button-text-content-border-bottom-color, var(--button-primary-content-border-bottom-color));
+    --button-content-border-bottom-color-hover: var(--button-text-content-border-bottom-color-hover, var(--button-primary-content-border-bottom-color-hover));
+}
+
+[data-color-mode="dark"] .button__content {
+    color: var(--button-content-color);
+}
+
+[data-color-mode="dark"] .button__text {
+    border-bottom-color: var(--button-content-border-bottom-color);
+}
+
+/**
+ * _author.css
+ */
+
+[data-color-mode="dark"] .author__content {
+    --background: var(--color-neutral-10);
+
+    background: var(--background);
+
+    &:before {
+        background:
+            radial-gradient(farthest-side at top left , transparent 98%, var(--background) 100%) left,
+            radial-gradient(farthest-side at top right, transparent 98%, var(--background) 100%) right;
+    }
+}
+
+/**
+ * _figure.css
+ */
+
+[data-color-mode="dark"] .figure__caption {
+    /* TODO: --figure-color is not defined */
+    color: var(--figure-color);
+}
+
+[data-color-mode="dark"] [class*='--bg-80'],
+[data-color-mode="dark"] [class*='--bg-100'] {
+    --figure-color: var(--color-neutral-0);
+}
+
+/**
+ * _footer.css
+ */
+
+[data-color-mode="dark"] .footer__meta {
+    border-top: 1px solid var(--color-primary-75);
+}
+
+/**
+ * _felogin-form.css
+ */
+
+[data-color-mode="dark"] input[type="submit"] {
+    background: var(--button-primary-color);
+    border: 2px solid var(--button-primary-border-color);
+    color: var(--button-primary-content-color);
+    border-bottom: 2px solid var(--button-text-content-border-bottom-color);
+
+    &:hover,
+    &:focus-within,
+    &:active {
+        background: var(--button-primary-color-hover);
+    }
+
+    &:focus-visible {
+        border-color: var(--button-primary-color-focus);
+        background: var(--button-primary-color-focus);
+        outline: 2px solid var(--button-secondary-color-focus);
+    }
+}
+
+[data-color-mode="dark"] input[type="text"],
+[data-color-mode="dark"] input[type="password"] {
+    border: 2px solid #ccc;
+
+    &:focus-visible {
+        outline: 2px solid var(--button-secondary-color-focus);
+        border-color: var(--color-neutral-0);
+    }
+}
+
+/**
+ * _header.css
+ */
+
+[data-color-mode="dark"] .header {
+    background: var(--static-color-primary-100);
+    color: var(--static-color-neutral-0);
+}
+
+[data-color-mode="dark"] .header__menu--open {
+    --nav-list-color: var(--static-color-neutral-80);
+    --nav-list-background: var(--static-color-neutral-0);
+    --nav-list-border: 1px solid var(--color-neutral-10);
+    --nav-list-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+    --nav-item-background-hover: var(--static-color-neutral-20);
+
+    color: var(--static-color-neutral-80);
+    background: #fff;
+}
+
+[data-color-mode="dark"] .header__nav-list {
+    color: var(--nav-list-color);
+    background: var(--nav-list-background);
+    box-shadow: var(--nav-list-box-shadow);
+    border: var(--nav-list-border);
+}
+
+[data-color-mode="dark"] .header__nav-item:hover {
+    background: var(--nav-item-background-hover);
+}
+
+[data-color-mode="dark"] .header__language-nav {
+    color: var(--nav-list-color);
+    background: var(--nav-list-background);
+    box-shadow: var(--nav-list-box-shadow);
+    border: var(--nav-list-border);
+}
+
+[data-color-mode="dark"] .header__language-button {
+    border: none;
+    background: transparent;
+    color: var(--static-color-neutral-80);
+}
+
+[data-color-mode="dark"] .header__language-button:focus {
+    outline: none;
+}
+
+[data-color-mode="dark"] .header__language-button:focus-visible {
+    outline: 2px solid var(--static-color-primary-100);
+    outline-offset: 1px;
+}
+
+[data-color-mode="dark"] .header__language-button-icon {
+    color: var(--static-color-neutral-60);
+}
+
+[data-color-mode="dark"] .header__language-menu {
+    --link-color: var(--static-color-primary-80); /*--static-color-primary-100);*/
+    --link-color-hover: var(--static-color-neutral-70);
+
+    color: var(--static-color-neutral-80);
+    background: var(--static-color-neutral-10);
+    border: none;
+    border-top: 1px solid var(--static-color-neutral-10);
+}
+
+[data-color-mode="dark"] .header__language-menu-link:hover,
+[data-color-mode="dark"] .header__language-menu-link:focus-visible {
+    background: var(--static-color-neutral-20);
+}
+
+[data-color-mode="dark"] .header__language-menu-link--disabled {
+    color: var(--static-color-neutral-50);
+}
+
+[data-color-mode="dark"] .header__subnav-item:hover {
+    background: var(--static-color-neutral-20);
+}
+
+/**
+ * Viewports
+ */
+
+/* Large */
+@media (min-width: 1280px) {
+
+    [data-color-mode="dark"] .header__nav {
+        --link-color: var(--static-color-neutral-0);
+        --link-color-hover: var(--static-color-neutral-10);
+    }
+
+    [data-color-mode="dark"] .header__language-nav {
+        border: none;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    [data-color-mode="dark"] .header__language-button {
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        background: transparent;
+        color: var(--static-color-neutral-0);
+    }
+
+    [data-color-mode="dark"] .header__language-button-icon {
+        color: var(--static-color-neutral-10);
+    }
+
+    [data-color-mode="dark"] .header__language-menu {
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+        border: 1px solid var(--static-color-neutral-10);
+    }
+
+    [data-color-mode="dark"] .header__nav-item:hover,
+    [data-color-mode="dark"] .header__nav-item--active {
+        &:before {
+            background-color: var(--static-color-neutral-0);
+        }
+    }
+
+    [data-color-mode="dark"] .header__nav-item--has-subnav {
+        &:after {
+            background-color: transparent;
+        }
+    }
+
+    [data-color-mode="dark"] .header__subnav {
+        --link-color: var(--color-primary-100);
+        --link-color-hover: var(--color-neutral-70);
+
+        color: var(--color-neutral-80);
+        background: var(--color-neutral-0);
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+        border: 1px solid var(--color-neutral-10);
+    }
+
+    [data-color-mode="dark"] .header__subnav-item {
+        &:hover {
+            background: var(--static-color-neutral-20);
+        }
+    }
+}
+
+/**
+ * _headline.css
+ */
+
+[data-color-mode="dark"] h3,
+[data-color-mode="dark"] .headline {
+    color: var(--headline-color, var(--text-color));
+
+/**
+ * _hero.css
+ */
+
+[data-color-mode="dark"] .hero {
+    background: var(--color-neutral-10);
+}
+
+/**
+ * _linklist.css
+ */
+
+[data-color-mode="dark"] .linklist {
+    --button-text-content-border-bottom-color: transparent;
+}
+
+/**
+ * _person.css
+ */
+
+[data-color-mode="dark"] .person__position {
+    color: var(--text-color-highlight);
+}
+
+/**
+ * _sociallinks.css
+ */
+
+[data-color-mode="dark"] .sociallinks__item {
+    a:focus-visible {
+        outline: 2px solid var(--link-color);
+    }
+}
+
+/**
+ * _testimonial.css
+ */
+
+[data-color-mode="dark"] [class*='--bg-80'] ,
+[data-color-mode="dark"] [class*='--bg-100'] {
+    --testimonal-quote-icon-color: var(--color-neutral-0);
+}
+
+[data-color-mode="dark"] .testimonial {
+    --icon-color: var(--testimonal-quote-icon-color, var(--color-primary-100));
+}
+
+/**
+ * _textmedia-teaser.css
+ */
+
+[data-color-mode="dark"] body {
+    --textmedia-teaser-background: var(--color-neutral-10);
+}
+
+[data-color-mode="dark"] [class*='--bg-10'] {
+    --textmedia-teaser-background: var(--color-neutral-0);
+}
+
+[data-color-mode="dark"] .textmedia-teaser {
+    --textmedia-meta-color: var(--color-neutral-70);
+    --textmedia-text-color: var(--color-neutral-90);
+    --textmedia-teaser-border-color-focus: var(--color-neutral-10);
+    --textmedia-teaser-outline-focus: var(--color-neutral-70);
+    --textmedia-teaser-background-color-focus: var(--color-neutral-100);
+
+    /* default colors for buttons independent of background */
+    --button-primary-color: var(--color-primary-100);
+    --button-primary-color-hover: var(--color-neutral-70);
+    --button-primary-color-focus: var(--color-neutral-70);
+    --button-primary-color-pressed: var(--color-neutral-70);
+    --button-primary-content-color: var(--color-neutral-0);
+    --button-primary-content-color-hover: var(--color-neutral-0);
+    --button-primary-content-color-pressed: var(--color-neutral-0);
+    --button-primary-border-color: var(--button-primary-color);
+    --button-primary-border-color-hover: var(--button-primary-color-hover);
+    --button-primary-border-color-pressed: var(--button-primary-color-pressed);
+    --button-primary-content-border-bottom-color: transparent;
+    --button-primary-content-border-bottom-color-hover: transparent;
+
+    background: var(--textmedia-teaser-background);
+}
+
+[data-color-mode="dark"] .textmedia-teaser--highlight {
+    --textmedia-teaser-background: var(--color-neutral-70);
+    --textmedia-meta-color: var(--color-neutral-10);
+    --textmedia-text-color: var(--color-neutral-0);
+
+    /* use the configuration for dark background for all "highlight" teasers */
+    --button-primary-color: var(--color-neutral-10);
+    --button-primary-color-hover: var(--color-neutral-20);
+    --button-primary-color-focus: var(--color-neutral-20);
+    --button-primary-color-pressed: var(--color-neutral-20);
+    --button-primary-content-color: var(--color-primary-100);
+    --button-primary-content-color-hover: var(--color-neutral-80);
+    --button-primary-content-color-pressed: var(--color-neutral-80);
+    --button-primary-border-color: var(--color-neutral-10);
+    --button-primary-border-color-hover: var(--color-neutral-20);
+    --button-primary-border-color-pressed: var(--color-neutral-20);
+    --button-primary-content-border-bottom-color: transparent;
+    --button-primary-content-border-bottom-color-hover: transparent;
+}
+
+[data-color-mode="dark"] .textmedia-teaser__content {
+    --text-color: var(--textmedia-text-color);
+}
+
+[data-color-mode="dark"] .textmedia-teaser__meta {
+    color: var(--textmedia-meta-color);
+}
+
+[data-color-mode="dark"] .textmedia-teaser--link {
+    &:hover,
+    &:focus-within,
+    &:active {
+        .button {
+            --button-content-color: var(--button-content-color-hover);
+            --button-content-border-bottom-color: var(--button-content-border-bottom-color-hover);
+            --button-color: var(--button-color-hover);
+            --button-border-color: var(--button-border-color-hover);
+        }
+    }
+
+    &:focus-visible {
+        background: var(--textmedia-teaser-background-color-focus);
+        border-color: var(--textmedia-teaser-border-color-focus);
+
+        .button {
+            border-color: var(--button-border-color);
+            outline: 2px solid var(--button-secondary-color-focus);
+            background: var(--button-color-focus);
+        }
+
+        &::after {
+            border: 2px solid var(--textmedia-teaser-outline-focus);
+        }
+    }
+}
+
+/**
+ * _textteaser.css
+ */
+
+[data-color-mode="dark"] .textteaser {
+    background: var(--background-color);
+    color: var(--text-color);
+}
