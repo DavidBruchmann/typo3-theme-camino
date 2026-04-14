@@ -93,7 +93,7 @@
     --button-primary-color-hover: var(--color-neutral-70);
     --button-primary-color-focus: var(--color-neutral-70);
     --button-primary-color-pressed: var(--color-neutral-70);
-    --button-primary-content-color: var(--color-neutral-0);
+    --button-primary-content-color: var(--color-neutral-90);
     --button-primary-content-color-hover: var(--color-neutral-0);
     --button-primary-content-color-pressed: var(--color-neutral-0);
     --button-primary-border-color: var(--button-primary-color);
@@ -173,12 +173,12 @@
     --button-soft-border-color-hover: var(--color-neutral-0);
     --button-soft-border-color-pressed: var(--color-neutral-0);
 
-    --button-text-content-color: var(--color-neutral-0);
-    --button-text-content-color-hover: var(--color-neutral-20);
+    --button-text-content-color: var(--color-neutral-90);
+    --button-text-content-color-hover: var(--color-neutral-100);
     --button-text-content-color-pressed: var(--color-neutral-20);
 
-    --button-text-content-border-bottom-color: var(--color-neutral-0);
-    --button-text-content-border-bottom-color-hover: var(--color-neutral-20);
+    --button-text-content-border-bottom-color: var(--color-neutral-90);
+    --button-text-content-border-bottom-color-hover: var(--color-neutral-100);
 }
 
 [data-color-mode="dark"] .button {
@@ -313,6 +313,16 @@
 
 [data-color-mode="dark"] .footer__meta {
     border-top: 1px solid var(--color-primary-75);
+}
+[data-color-mode="dark"] .footer ul a,
+[data-color-mode="dark"] .footer ol a {
+    --text-color: var(--color-neutral-90);
+    color: var(--text-color);
+}
+[data-color-mode="dark"] .footer ul a:hover,
+[data-color-mode="dark"] .footer ol a:hover {
+    --text-color-highlight: var(--color-neutral-10);
+    color: var(--text-color-highlight);
 }
 
 /**
