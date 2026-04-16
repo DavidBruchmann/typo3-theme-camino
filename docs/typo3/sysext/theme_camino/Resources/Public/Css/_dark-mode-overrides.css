@@ -60,20 +60,39 @@
 [data-color-mode="dark"] ol {
     color: var(--text-color);
 }
-
+/*
 [data-color-mode="dark"] a,
 [data-color-mode="dark"] button {
-    color: var(--link-color); /* should be like #FF996B (camino) */
+    color: var(--static-color-primary-75);
 
     &:hover:not(:disabled) {
-        color: var(--link-color-hover);
+        color: var(--static-color-neutral-0);
     }
 
     &:focus-visible {
-        outline: 2px solid var(--color-primary-100);
+        outline: 2px solid var(--static-color-neutral-30);
         --box-shadow-color: white;
+        color: var(--static-color-neutral-0);
     }
 }
+
+[data-color-mode="dark"] header.header a,
+[data-color-mode="dark"] header.header button
+[data-color-mode="dark"] footer a,
+[data-color-mode="dark"] footer button {
+    color: var(--static-color-neutral-0);
+    &:hover:not(:disabled) {
+        color: var(--link-color-hover);
+    }
+    &:focus-visible {
+        outline: 2px solid var(--static-color-primary-100);
+        --box-shadow-color: white;
+        box-shadow: 0 0 0 2px var(--box-shadow-color);
+    }
+
+}
+*/
+
 
 /**
  * _icon.css
