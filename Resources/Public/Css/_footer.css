@@ -34,6 +34,42 @@
     padding: var(--spacing-m) 0;
 }
 
+/* Improve Accessibility */
+footer {
+    a.footer__logo {
+        position: relative;
+
+        &:hover::before,
+        &:focus-visible::before {
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: var(--static-color-neutral-0);
+            left: 0px;
+            right: 0px;
+            bottom: -2px;
+            position: absolute;
+        }
+    }
+    .footer__col {
+        .button {
+            &:focus-visible {
+                box-shadow: none;
+                outline: 2px solid var(--color-primary-100);
+            }
+        }
+        .sociallinks {
+            a, button {
+                &:hover,
+                &:focus-visible {
+                    border-radius: calc(var(--corners-m) - 2px);
+                    outline: 2px solid var(--link-color);
+                }
+            }
+        }
+    }
+}
+
 /**
  * Viewports
  */

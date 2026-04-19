@@ -289,6 +289,35 @@
     }
 }
 
+/* Improve Accessibility */
+header {
+    /** TODO: activate submenu by keyboard */
+    a:not(.header__logo),
+    button:not(.header__language-button) {
+        &:focus-visible {
+            border-color: #fff;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+            outline: 1px solid #fff;
+            border-radius: calc(var(--corners-m) - 2px);
+        }
+    }
+    a.header__logo {
+        position: relative;
+
+        &:hover::before,
+        &:focus-visible::before {
+            content: "";
+            display: block;
+            height: 2px;
+            background-color: var(--static-color-neutral-0);
+            left: 0px;
+            right: 0px;
+            bottom: -2px;
+            position: absolute;
+        }
+    }
+}
+
 /**
  * Viewports
  */

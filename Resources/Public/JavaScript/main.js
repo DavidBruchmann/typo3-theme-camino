@@ -100,6 +100,71 @@ if (menuButtons.length && nav) {
     body.style.overflow = menuOpen ? 'hidden' : '';
   };
 
+/** NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW START */
+/*
+// Select your elements based on existing classes
+const navItems = document.querySelectorAll('.JS_header-nav-list-item');
+const subnavLinks = document.querySelectorAll('.JS_header_subnav_link');
+
+// 1. IMPROVED SUBNAV TOGGLE (Mobile + Desktop Keyboard)
+subnavLinks.forEach(link => {
+  link.addEventListener('click', event => {
+    // If it's mobile, keep your existing slide-in logic
+    if (isMobile()) {
+      event.preventDefault();
+      const targetId = link.dataset.target;
+      const subnav = document.getElementById(targetId);
+      if (subnav) subnav.classList.toggle('header__subnav--active');
+      return;
+    }
+
+    // DESKTOP LOGIC:
+    // If a keyboard user hits "Enter" on the link itself, let it navigate.
+    // If they hit "Space" (which triggers a click on buttons/summaries),
+    // we let the <details> toggle naturally.
+  });
+});
+
+// 2. DESKTOP ACCESSIBILITY & POLISH
+navItems.forEach(item => {
+  const details = item.querySelector('details');
+  if (!details) return;
+
+  // CLOSE ON ESCAPE: Standard accessibility for menus
+  item.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && details.hasAttribute('open')) {
+      details.removeAttribute('open');
+      item.querySelector('.header__nav-item').focus();
+    }
+  });
+
+  // CLOSE ON CLICK OUTSIDE: Makes the menu feel "smart"
+  document.addEventListener('click', (e) => {
+    if (!item.contains(e.target) && details.hasAttribute('open')) {
+      details.removeAttribute('open');
+    }
+  });
+
+  // HOVER DELAY (Optional): Prevents the menu from flickering
+  // if the mouse leaves for a split second.
+  let timeout;
+  item.addEventListener('mouseleave', () => {
+    if (!isMobile()) {
+      timeout = setTimeout(() => {
+        details.removeAttribute('open');
+      }, 300); // 300ms "grace period"
+    }
+  });
+
+  item.addEventListener('mouseenter', () => {
+    clearTimeout(timeout);
+  });
+});
+*/
+
+/** NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW NEW END */
+
+
   // menu buttons
   menuButtons.forEach(menuButton => {
     menuButton.addEventListener('click', event => {
@@ -129,6 +194,8 @@ if (menuButtons.length && nav) {
       subnav.classList.toggle('header__subnav--active');
     });
   });
+  /*
+  */
 
   // Reset at desktop viewport
   window.addEventListener('resize', () => {
