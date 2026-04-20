@@ -2,6 +2,8 @@
 
 page = PAGE
 page {
+  shortcutIcon = EXT:theme_camino/Resources/Public/Icons/favicon.ico
+
   # set color-scheme class to body tag
   bodyTagCObject = COA
   bodyTagCObject {
