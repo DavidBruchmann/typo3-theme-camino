@@ -11,7 +11,7 @@
 -->
 
 
-<title>Theme Farbe: Forest Mist</title>
+<title>Overriding</title>
 <meta name="generator" content="TYPO3 CMS">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,11 +24,11 @@
 <script src="/typo3-theme-camino/typo3temp/assets/js/f1c0e4210335dfe7e80513e7c6493679.js"></script>
 
 
-<link rel="canonical" href="/typo3-theme-camino/de/das-theme/theme-farbe-forest-mist.html">
+<link rel="canonical" href="/typo3-theme-camino/de/das-theme/overriding.html">
 
-<link rel="alternate" hreflang="en-US" href="/typo3-theme-camino/the-theme/theme-color-forest-mist.html">
-<link rel="alternate" hreflang="de-DE" href="/typo3-theme-camino/de/das-theme/theme-farbe-forest-mist.html">
-<link rel="alternate" hreflang="x-default" href="/typo3-theme-camino/the-theme/theme-color-forest-mist.html">
+<link rel="alternate" hreflang="en-US" href="/typo3-theme-camino/the-theme/overriding.html">
+<link rel="alternate" hreflang="de-DE" href="/typo3-theme-camino/de/das-theme/overriding.html">
+<link rel="alternate" hreflang="x-default" href="/typo3-theme-camino/the-theme/overriding.html">
 
 </head>
 <body class="theme-caramel-cream  darkModeHeaderFooterColor-white  darkMode-dark-medium">
@@ -327,7 +327,7 @@
                 <li class="header__language-menu-item">
                     
                             
-                                    <a href="/typo3-theme-camino/the-theme/theme-color-forest-mist.html" lang="en-US" hreflang="en-US" class="header__language-menu-link">
+                                    <a href="/typo3-theme-camino/the-theme/overriding.html" lang="en-US" hreflang="en-US" class="header__language-menu-link">
                                         
     English
 
@@ -339,7 +339,7 @@
                 <li class="header__language-menu-item">
                     
                             
-                                    <a href="/typo3-theme-camino/de/das-theme/theme-farbe-forest-mist.html" lang="de-DE" hreflang="de-DE" aria-current="page" class="header__language-menu-link header__language-menu-link--active">
+                                    <a href="/typo3-theme-camino/de/das-theme/overriding.html" lang="de-DE" hreflang="de-DE" aria-current="page" class="header__language-menu-link header__language-menu-link--active">
                                         
     Deutsch
 
@@ -446,8 +446,14 @@
 
 <main class="page__content ">
     
-        <!--TYPO3SEARCH_begin-->
+    
+
+<div class="component  component--page-area">
+    <div class="component__content">
         
+        <div class="article">
+            <div class="article__content">
+                
 
 
 
@@ -465,7 +471,7 @@
     
         
 
-<span class="anchor" id="c51"><span id="c52"></span></span>
+<span class="anchor" id="c86"><span id="c98"></span></span>
 
 
     
@@ -515,7 +521,7 @@
     
 
     
-            <p class="headline">Doe-Day</p>
+            <p class="headline">Konfiguration &uuml;berschreiben</p>
         
 
 
@@ -534,7 +540,275 @@
 
 
 <div class="rich-text">
-    <p>Doe-Day Doe-Day Doe-Day Doe-Day</p>
+    <p>Ein Aspekt beim Camino Theme ist, das PageTS nicht &uuml;berschrieben werden kann, da das Theme diese Option deaktiviert.</p>
+<p>Da ich Inhaltselemente verwenden wollte, die durch die Theme-Erweiterung nicht zur Verf&uuml;gung gestellt werden, hatte ich Bedarf gesehen die PageTS-Einschr&auml;nkung aufzuheben. Daher habe ich daf&uuml;r eine kleine Erweiterung erstellt</p>
+<p>Es ist nat&uuml;rlich m&ouml;glich, alle Einstellungen des Camino-Themes &uuml;ber ein Sitepackage zu &auml;ndern, ich wollte aber lediglich das Feld f&uuml;r PageTS in den Seiten aktivieren und die &Auml;nderungen anschlie&szlig;end in der Datenbank speichern.<br>Der &uuml;bliche Ansatz w&auml;re, die Konfigurationen in einer separaten Erweiterung zu schreiben, auch um die Einstellungen per Git versionieren zu k&ouml;nnen.<br>Mein gegens&auml;tzlicher Ansatz hingegen basiert auf der Idee, so wenig Konfiguration wie m&ouml;glich durch zus&auml;tzlichen Erweiterungscode zu &auml;ndern und stattdessen direkt im Theme und im TYPO3-Backend zu arbeiten.</p>
+<p>Dies f&uuml;hrte zu einer sehr minimalistischen Erweiterung namens &bdquo;My Camino&ldquo;, die im Wesentlichen nur einen Konfigurationswert der Camino-Theme-Erweiterung &auml;ndert: die Aktivierung des PageTS-Felds in den Seiten.<br>Insbesondere f&uuml;r weniger erfahrene Benutzer kann dies schwierig sein, ohne zu viel Aufwand zu betreiben oder Konflikte mit der Theme-Erweiterung zu riskieren. Daher habe ich diese schlanke Erweiterung hier ver&ouml;ffentlicht:<br>&nbsp;</p>
+</div>
+
+
+    
+
+<p class="button-wrapper__p">
+    <span class="button-wrapper">
+        
+        
+
+
+
+
+
+
+
+
+
+        
+                <a href="https://github.com/DavidBruchmann/my-camino" class="button">
+                    
+    <span class="button__content">
+        
+                <span class="button__text">
+                    
+    
+            Erweiterung: My Camino
+        
+
+                </span>
+                
+
+
+
+
+
+            
+    </span>
+
+    
+
+                </a>
+            
+    
+
+
+
+
+
+
+
+    
+    </span>
+</p>
+
+
+
+
+
+
+
+        </div>
+    
+</div>
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+            </div>
+
+            <div class="article__aside">
+                
+
+
+
+
+        
+    
+
+
+
+
+
+<div class="component component--bg-10 ">
+    <div class="component__content">
+        
+    
+        
+
+<span class="anchor" id="c88"><span id="c92"></span></span>
+
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+        
+    
+
+
+
+
+
+<div class="component  ">
+    <div class="component__content">
+        
+    
+        
+
+<span class="anchor" id="c87"><span id="c93"></span></span>
+
+
+    
+
+    
+
+    
+    
+
+
+        
+        
+    
+
+
+    
+
+
+<div class="textpic textpic--below">
+    
+    
+        <div class="textpic__media">
+            
+                    
+                            
+
+
+
+<figure class="figure">
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+    
+            <picture class="image__picture">
+
+                
+                    
+
+                    
+                        <source srcset="/typo3-theme-camino/fileadmin/_processed_/f/0/csm_support_me_on_kofi_red_84f6105c36.webp" media="(min-width: 1024px)"></source>
+                    
+                
+                    
+
+                    
+                        <source srcset="/typo3-theme-camino/fileadmin/_processed_/f/0/csm_support_me_on_kofi_red_8aa58cacab.webp" media="(min-width: 768px)"></source>
+                    
+                
+                    
+
+                    
+                        <source srcset="/typo3-theme-camino/fileadmin/_processed_/f/0/csm_support_me_on_kofi_red_0229ac4012.webp" media="(min-width: 480px)"></source>
+                    
+                
+
+                
+                        <a href="https://ko-fi.com/davidbruchmann">
+                            <img loading="lazy" class="image" src="/typo3-theme-camino/fileadmin/_processed_/f/0/csm_support_me_on_kofi_red_d396466f43.webp" width="450" height="91" alt="Support me on KoFi">
+                        </a>
+                    
+            </picture>
+        
+
+
+
+
+        
+
+    
+</figure>
+
+
+
+                        
+                
+        </div>
+    
+
+    
+    
+    
+        <div class="textpic__text">
+            
+
+
+
+
+
+
+        
+            
+
+
+    
+        
+            
+        
+
+        
+        
+
+        
+                
+            
+    
+
+    
+            <p class="headline">Support</p>
+        
+
+
+
+
+        
+    
+
+
+
+
+
+
+
+
+
+
+<div class="rich-text">
+    <p>Wenn Du den Hell/Dunkel Button, diese Seite oder die kleine Erweiterung &ldquo;My Camino&rdquo; magst, oder irgendwas Anderes was ich tue, bitte erachte mich zu unterst&uuml;tzen!</p>
 </div>
 
 
@@ -594,8 +868,28 @@
 
 
 
-        <!--TYPO3SEARCH_end-->
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
     
+    </div>
+</div>
+
+
+
+
 </main>
 
 
