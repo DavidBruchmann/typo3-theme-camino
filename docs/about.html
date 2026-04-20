@@ -16,6 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+<link rel="stylesheet" href="/typo3-theme-camino/typo3temp/assets/css/79cb69784348c754c95c07fc0a0e957a.css" media="all">
 <link media="all" href="/typo3-theme-camino/typo3/sysext/theme_camino/Resources/Public/Css/main.css" rel="stylesheet">
 
 
@@ -245,96 +246,11 @@
                         
                             
     <li class="header__nav-list-item JS_header-nav-list-item">
-        <a href="/typo3-theme-camino/community.html" data-target="subnavigation-19" class="header__nav-item header__nav-item--has-subnav JS_header_subnav_link">
+        <a href="/typo3-theme-camino/community.html" class="header__nav-item">
             Community
-            
-                
-
-
-
-<svg aria-hidden="true" class="icon icon--chevron" width="32" height="32" viewbox="0 0 32 32" fill="none">
-    <path d="M16 20.9333L8 12.9333L9.86667 11.0667L16 17.2L22.1333 11.0667L24 12.9333L16 20.9333Z" fill="currentColor"></path>
-</svg>
-
-
-
-
-
-
             
         </a>
 
-        
-            <ul class="header__subnav JS_header-subnav" id="subnavigation-19">
-                <li class="header__subnav-list-item header__subnav-list-item--back">
-                    <button class="header__subnav-item header__subnav-item--back JS_header-nav-back">
-                        
-
-
-
-<svg aria-hidden="true" class="icon icon--arrow-left" width="32" height="32" viewbox="0 0 32 32" fill="none">
-    <path d="M12 25.3333L2.66669 16L12 6.66666L13.8667 8.53332L7.76669 14.6667H29.3334V17.3333H7.76669L13.9 23.4667L12 25.3333Z" fill="currentColor"></path>
-</svg>
-
-
-
-
-
-
-                        Community
-                    </button>
-                </li>
-
-                
-                    <li class="header__subnav-list-item">
-                        <a href="https://news.typo3.com/" class="header__subnav-item">
-                            Blog &amp; News
-                        </a>
-                    </li>
-                
-                    <li class="header__subnav-list-item">
-                        <a href="https://news.typo3.com/events" class="header__subnav-item">
-                            Events &amp; Meetups
-                        </a>
-                    </li>
-                
-                    <li class="header__subnav-list-item">
-                        <a href="https://typo3.org/community" class="header__subnav-item">
-                            Get Involved
-                        </a>
-                    </li>
-                
-                    <li class="header__subnav-list-item">
-                        <a href="https://typo3.community/help" class="header__subnav-item">
-                            Get Help
-                        </a>
-                    </li>
-                
-                    <li class="header__subnav-list-item">
-                        <a href="https://typo3.com/products-services/certifications" class="header__subnav-item">
-                            Certification
-                        </a>
-                    </li>
-                
-                    <li class="header__subnav-list-item">
-                        <a href="https://typo3.com/products-services" class="header__subnav-item">
-                            Webinars
-                        </a>
-                    </li>
-                
-                    <li class="header__subnav-list-item">
-                        <a href="https://docs.typo3.org/m/typo3/guide-contributionworkflow/" class="header__subnav-item">
-                            Contribution
-                        </a>
-                    </li>
-                
-                    <li class="header__subnav-list-item">
-                        <a href="https://typo3.com/products-services/official-trainings/official-typo3-courses" class="header__subnav-item">
-                            Training
-                        </a>
-                    </li>
-                
-            </ul>
         
     </li>
 
@@ -443,14 +359,16 @@
 
 
 
-<div class="theme-toggle theme-toggle-three-buttons js-3btn-3opt">
-    <fieldset class="theme-switcher" role="radiogroup" aria-labelledby="theme-switcher-label">
+
+<div class="theme-toggle theme-toggle-single js-1btn-3opt">
+    <fieldset class="theme-switcher">
         <legend class="sr-only" id="theme-switcher-label">
             Appearance
         </legend>
-        <label class="theme-option" data-tooltip="Light mode">
-            <input type="radio" name="theme" value="light" aria-label="Light mode">
-            <span class="icon-wrap icon-light SVG" aria-hidden="true">
+        <label class="theme-option">
+            <button type="button" class="theme-toggle theme-toggle-single js-1btn-3opt" aria-live="polite" aria-label="Appearance toggle" data-tooltip="System mode">
+                
+                        <span class="icon-wrap icon-light SVG" aria-hidden="true" data-tooltip="Light mode">
 
 
 
@@ -463,11 +381,7 @@
 
 
 </span>
-            <span class="sr-only">Light mode</span>
-        </label>
-        <label class="theme-option" data-tooltip="System mode">
-            <input type="radio" name="theme" value="system" aria-label="System mode">
-            <span class="icon-wrap icon-system SVG" aria-hidden="true">
+                        <span class="icon-wrap icon-system SVG" aria-hidden="true" data-tooltip="System mode">
 
 
 
@@ -483,11 +397,7 @@
 
 
 </span>
-            <span class="sr-only">System mode</span>
-        </label>
-        <label class="theme-option" data-tooltip="Dark mode">
-            <input type="radio" name="theme" value="dark" aria-label="Dark mode">
-            <span class="icon-wrap icon-dark SVG" aria-hidden="true">
+                        <span class="icon-wrap icon-dark SVG" aria-hidden="true" data-tooltip="Dark mode">
 
 
 
@@ -500,10 +410,13 @@
 
 
 </span>
-            <span class="sr-only">Dark mode</span>
+                    
+                <span class="sr-only">Appearance toggle</span>
+            </button>
         </label>
     </fieldset>
 </div>
+
 
     
 
@@ -621,7 +534,7 @@
 
 
 <div class="rich-text">
-    <p>This website servers as demo, as showcase concerning the Camino-Theme itself. The theme was developed as optional component of TYPO3 v14 and is freely available to start an own website.<br><br><strong>The Appearance-Toggle to switch between dark and light mode</strong> is not part yet of the official theme. It exists in different variations with 1-3 buttons, with UTF-8 signs for sun, half-moon and moon, as well as according SVG icons. On a common website there should exist only one solution, so I made the choice for the 3 button-toggle.<br>The adjusted theme extension offers the choice in the backend, and you can <a href="https://github.com/DavidBruchmann/typo3-theme-camino/" target="_blank" rel="noreferrer">download this repository here</a>.<br><br>Furthermore you can switch easily between the different color themes, so you get a quick impression how each color choice looks in detail. Note though, that some adjustments concerning colors for content elements are available in the backend, and not all available variants are used on this website.</p>
+    <p>This website servers as demo, as showcase concerning the Camino-Theme itself. The theme was developed as optional component of TYPO3 v14 and is freely available to start an own website.<br><br><strong>The Appearance-Toggle to switch between dark and light mode</strong> is not part yet of the official theme. It exists in different variations with 1-3 buttons, with UTF-8 signs for sun, half-moon and moon, as well as according SVG icons. On a common website there should exist only one solution, so I made the choice for the 1 button-toggle.<br>The adjusted theme extension offers the choice in the backend, and you can <a href="https://github.com/DavidBruchmann/typo3-theme-camino/" target="_blank" rel="noreferrer">download this repository here</a>.<br><br>Furthermore you can switch easily between the different color themes, so you get a quick impression how each color choice looks in detail. Note though, that some adjustments concerning colors for content elements are available in the backend, and not all available variants are used on this website.</p>
 </div>
 
 
@@ -1528,6 +1441,63 @@ This repository is only related by concept to this website because this static w
 
 
 
+
+
+
+
+        
+    
+
+
+
+
+
+<div class="component  ">
+    <div class="component__content">
+        
+    
+        
+
+<span class="anchor" id="c64"></span>
+
+
+    
+
+    
+
+    
+    
+
+
+        
+        
+    
+
+
+
+<div class="textpic ">
+    
+    
+
+    
+    
+    
+</div>
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
             </div>
 
             <div class="article__aside">
@@ -1583,7 +1553,9 @@ This repository is only related by concept to this website because this static w
 
 
     
-            <img loading="lazy" class="image" src="/typo3-theme-camino/fileadmin/_processed_/1/4/csm_David-Portrait_aa34f800a4.svg" width="128" height="128" alt="">
+            
+                    <img loading="lazy" class="image" src="/typo3-theme-camino/fileadmin/_processed_/1/4/csm_David-Portrait_aa34f800a4.svg" width="128" height="128" alt="">
+                
         
 
 
@@ -1621,6 +1593,260 @@ In the very beginning of 2013 I moved from Germany to Indonesia, which didn't ch
             </div>
         
     </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+
+
+
+
+<div class="component component--bg-10 ">
+    <div class="component__content">
+        
+    
+        
+
+<span class="anchor" id="c89"></span>
+
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+        
+    
+
+
+
+
+
+<div class="component  ">
+    <div class="component__content">
+        
+    
+        
+
+<span class="anchor" id="c87"></span>
+
+
+    
+
+    
+
+    
+    
+
+
+        
+        
+    
+
+
+    
+
+
+<div class="textpic textpic--below">
+    
+    
+        <div class="textpic__media">
+            
+                    
+                            
+
+
+
+<figure class="figure">
+    
+            
+
+
+
+
+
+
+
+
+
+
+
+    
+            <picture class="image__picture">
+
+                
+                    
+
+                    
+                        <source srcset="/typo3-theme-camino/fileadmin/_processed_/f/0/csm_support_me_on_kofi_red_84f6105c36.webp" media="(min-width: 1024px)"></source>
+                    
+                
+                    
+
+                    
+                        <source srcset="/typo3-theme-camino/fileadmin/_processed_/f/0/csm_support_me_on_kofi_red_8aa58cacab.webp" media="(min-width: 768px)"></source>
+                    
+                
+                    
+
+                    
+                        <source srcset="/typo3-theme-camino/fileadmin/_processed_/f/0/csm_support_me_on_kofi_red_0229ac4012.webp" media="(min-width: 480px)"></source>
+                    
+                
+
+                
+                        <a href="https://ko-fi.com/davidbruchmann">
+                            <img loading="lazy" class="image" src="/typo3-theme-camino/fileadmin/_processed_/f/0/csm_support_me_on_kofi_red_d396466f43.webp" width="450" height="91" alt="Support me on KoFi">
+                        </a>
+                    
+            </picture>
+        
+
+
+
+
+        
+
+    
+</figure>
+
+
+
+                        
+                
+        </div>
+    
+
+    
+    
+    
+        <div class="textpic__text">
+            
+
+
+
+
+
+
+        
+            
+
+
+    
+        
+            
+        
+
+        
+        
+
+        
+                
+            
+    
+
+    
+            <p class="headline">Support</p>
+        
+
+
+
+
+        
+    
+
+
+
+
+
+
+
+
+
+
+<div class="rich-text">
+    <p>If you like the Dark/Light Toggle, this site or the small extension &ldquo;My Camino&rdquo;, or anything else I do, please consider to support me!</p>
+</div>
+
+
+    
+
+<p class="button-wrapper__p">
+    <span class="button-wrapper">
+        
+        
+
+
+
+
+
+
+
+
+
+        
+                
+                
+                
+            
+    
+
+
+
+
+
+
+
+    
+    </span>
+</p>
+
+
+
+
+
+
+
+        </div>
+    
+</div>
+
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
 
 
     </div>
@@ -2568,7 +2794,7 @@ In the very beginning of 2013 I moved from Germany to Indonesia, which didn't ch
     </div>
 </footer>
 
-<script src="/typo3-theme-camino/typo3temp/assets/js/dff4587fc74d34ad762dbad112486aab.js"></script>
+<script src="/typo3-theme-camino/typo3temp/assets/js/1e9b670793bb5693917252bafe764261.js"></script>
 <script type="module" src="/typo3-theme-camino/typo3/sysext/theme_camino/Resources/Public/JavaScript/main.js"></script>
 <script type="module" src="/typo3-theme-camino/typo3/sysext/theme_camino/Resources/Public/JavaScript/ThemeManager.js"></script>
 <script>

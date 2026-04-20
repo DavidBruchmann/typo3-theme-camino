@@ -1,0 +1,22 @@
+
+/* According elements are not included in the original Camino Theme at this position */
+html[data-color-mode="dark"] div.article__aside div.component.component--bg-100 .textpic__text {
+      .headline,
+      .rich-text,
+      .rich-text p {
+          color: #fff;
+      }
+}
+div.article__aside div.component.component--bg-10,
+div.article__aside div.component.component--bg-80,
+div.article__aside div.component.component--bg-100 {
+    padding-top: 0;
+    padding-bottom: 24px;
+    border-radius: 10px;
+      
+    div.component__content div.component {
+       	margin-top: 0;
+      	padding-top: 24px;
+       	padding-bottom: 0;
+    }
+}

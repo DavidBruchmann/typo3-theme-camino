@@ -66,7 +66,8 @@ a, button {
         cursor: pointer;
     }
 
-    &:hover:not(:disabled) {
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
         color: var(--link-color-hover);
     }
 

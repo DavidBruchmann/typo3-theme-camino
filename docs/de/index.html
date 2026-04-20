@@ -11,11 +11,12 @@
 -->
 
 
-<title>root</title>
+<title>Startseite</title>
 <meta name="generator" content="TYPO3 CMS">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+<link rel="stylesheet" href="/typo3-theme-camino/typo3temp/assets/css/79cb69784348c754c95c07fc0a0e957a.css" media="all">
 <link media="all" href="/typo3-theme-camino/typo3/sysext/theme_camino/Resources/Public/Css/main.css" rel="stylesheet">
 
 
@@ -245,48 +246,11 @@
                         
                             
     <li class="header__nav-list-item JS_header-nav-list-item">
-        <a href="/typo3-theme-camino/de/community.html" data-target="subnavigation-19" class="header__nav-item header__nav-item--has-subnav JS_header_subnav_link">
+        <a href="/typo3-theme-camino/de/community.html" class="header__nav-item">
             Community
-            
-                
-
-
-
-<svg aria-hidden="true" class="icon icon--chevron" width="32" height="32" viewbox="0 0 32 32" fill="none">
-    <path d="M16 20.9333L8 12.9333L9.86667 11.0667L16 17.2L22.1333 11.0667L24 12.9333L16 20.9333Z" fill="currentColor"></path>
-</svg>
-
-
-
-
-
-
             
         </a>
 
-        
-            <ul class="header__subnav JS_header-subnav" id="subnavigation-19">
-                <li class="header__subnav-list-item header__subnav-list-item--back">
-                    <button class="header__subnav-item header__subnav-item--back JS_header-nav-back">
-                        
-
-
-
-<svg aria-hidden="true" class="icon icon--arrow-left" width="32" height="32" viewbox="0 0 32 32" fill="none">
-    <path d="M12 25.3333L2.66669 16L12 6.66666L13.8667 8.53332L7.76669 14.6667H29.3334V17.3333H7.76669L13.9 23.4667L12 25.3333Z" fill="currentColor"></path>
-</svg>
-
-
-
-
-
-
-                        Community
-                    </button>
-                </li>
-
-                
-            </ul>
         
     </li>
 
@@ -395,14 +359,16 @@
 
 
 
-<div class="theme-toggle theme-toggle-three-buttons js-3btn-3opt">
-    <fieldset class="theme-switcher" role="radiogroup" aria-labelledby="theme-switcher-label">
+
+<div class="theme-toggle theme-toggle-single js-1btn-3opt">
+    <fieldset class="theme-switcher">
         <legend class="sr-only" id="theme-switcher-label">
             Appearance
         </legend>
-        <label class="theme-option" data-tooltip="Light mode">
-            <input type="radio" name="theme" value="light" aria-label="Light mode">
-            <span class="icon-wrap icon-light SVG" aria-hidden="true">
+        <label class="theme-option">
+            <button type="button" class="theme-toggle theme-toggle-single js-1btn-3opt" aria-live="polite" aria-label="Appearance toggle" data-tooltip="System mode">
+                
+                        <span class="icon-wrap icon-light SVG" aria-hidden="true" data-tooltip="Light mode">
 
 
 
@@ -415,11 +381,7 @@
 
 
 </span>
-            <span class="sr-only">Light mode</span>
-        </label>
-        <label class="theme-option" data-tooltip="System mode">
-            <input type="radio" name="theme" value="system" aria-label="System mode">
-            <span class="icon-wrap icon-system SVG" aria-hidden="true">
+                        <span class="icon-wrap icon-system SVG" aria-hidden="true" data-tooltip="System mode">
 
 
 
@@ -435,11 +397,7 @@
 
 
 </span>
-            <span class="sr-only">System mode</span>
-        </label>
-        <label class="theme-option" data-tooltip="Dark mode">
-            <input type="radio" name="theme" value="dark" aria-label="Dark mode">
-            <span class="icon-wrap icon-dark SVG" aria-hidden="true">
+                        <span class="icon-wrap icon-dark SVG" aria-hidden="true" data-tooltip="Dark mode">
 
 
 
@@ -452,10 +410,13 @@
 
 
 </span>
-            <span class="sr-only">Dark mode</span>
+                    
+                <span class="sr-only">Appearance toggle</span>
+            </button>
         </label>
     </fieldset>
 </div>
+
 
     
 
@@ -638,6 +599,7 @@
 
     
             <picture class="image__picture">
+
                 
                     
 
@@ -670,7 +632,11 @@
                     
                 
 
-                <img loading="eager" class="image" src="/typo3-theme-camino/fileadmin/_processed_/5/6/csm_landscape_1ab9f9759d.webp" width="479" height="270" alt="">
+                
+                        
+                            <img loading="eager" class="image" src="/typo3-theme-camino/fileadmin/_processed_/5/6/csm_landscape_1ab9f9759d.webp" width="479" height="270" alt="">
+                        
+                    
             </picture>
         
 
@@ -781,6 +747,7 @@
 
 <div class="rich-text">
     <p>Diese Seite wurde erstellt mit <a href="https://typo3.org" target="_blank" rel="noreferrer">TYPO3</a> und dem Camino Theme.</p>
+<p>Die Besonderheiten auf dieser Seite sind:</p><ul><li data-list-item-id="eb6eb342b013df94d09342d5a26e693c9">Der Hell/Dunkel Button rechts oben.</li><li data-list-item-id="ec60c85767de4bb9cc912f84c5033cdad">Der Menupunkt &ldquo;Das Theme&rdquo; &ouml;ffnet ein Untermen&uuml; bei Mouse-Over, dort k&ouml;nnen die vier verschiedenen Farbmodi ausgew&auml;hlt werden, die normalerweise nur &uuml;ber das TYPO3 Backend eingestellt werden k&ouml;nnen.</li></ul><p>Beide Optionen werden auf Deinem Ger&auml;t gespeichert und sind somit seiten&uuml;bergreifen Deiner Auswahl entsprechend. Da die Auswahl wird nicht an den Server &uuml;bertragen wird, erhalte ich keine Kenntnis Deiner entsprechenden Pr&auml;ferenzen.</p>
 </div>
 
 
@@ -828,6 +795,259 @@
 
 
 
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+
+
+
+
+<div class="component  ">
+    <div class="component__content">
+        
+    
+        
+
+<span class="anchor" id="c96"><span id="c97"></span></span>
+
+
+    
+
+    
+
+    
+    <div class="textmedia-teaser-grid">
+        
+        
+        
+        
+            <div class="textmedia-teaser-grid__intro">
+                
+
+
+
+
+
+
+        
+            
+
+
+    
+        
+            
+        
+
+        
+        
+
+        
+                
+            
+    
+
+    
+            <p class="headline">Sponsoren</p>
+        
+
+
+
+
+        
+    
+
+
+
+
+
+
+
+
+
+
+<div class="rich-text">
+    <p>Folgende Sponsoren haben meine Arbeit am Hell/Dunkel Button und dem zugeh&ouml;rigen CSS unterst&uuml;tzt:</p>
+</div>
+
+
+    
+
+<p class="button-wrapper__p">
+    <span class="button-wrapper">
+        
+        
+
+
+
+
+
+
+
+
+
+        
+                
+                
+                
+            
+    
+
+
+
+
+
+
+
+    
+    </span>
+</p>
+
+
+
+
+
+
+
+            </div>
+        
+        
+            
+
+<div class="teaser-scroller">
+    <div class="teaser-scroller__list">
+        
+                <div class="textmedia-teaser-grid__grid">
+                    
+                        
+
+
+    
+            <a href="https://in2code.de" class="textmedia-teaser textmedia-teaser--link">
+                
+    
+
+    <div class="textmedia-teaser__content">
+        
+
+
+    
+        
+
+        
+        
+
+        
+                
+            
+    
+
+    
+            <header class="headline headline--small">In2Code</header>
+        
+
+
+
+
+
+        
+
+        
+        
+            <p class="textmedia-teaser__text">Alexander Kellner von In2Code hat meine Anfrage nach Sponsoring sehr gelassen und relativ gro&szlig;z&uuml;gig beantwortet!<br>
+Vielen Dank!</p>
+        
+
+        
+            
+
+
+
+
+
+
+
+
+
+        
+
+        
+            
+        
+
+        <button class="button  " tabindex="-1">
+            
+    <span class="button__content">
+        
+                <span class="button__text">
+                    
+    
+            In2Code
+        
+
+                </span>
+                
+
+
+
+<svg aria-hidden="true" class="icon icon--globe" width="32" height="32" viewbox="0 0 32 32" fill="none">
+    <path d="M16 28C14.36 28 12.81 27.685 11.35 27.055C9.89 26.425 8.615 25.565 7.525 24.475C6.435 23.385 5.575 22.11 4.945 20.65C4.315 19.19 4 17.64 4 16C4 14.34 4.315 12.785 4.945 11.335C5.575 9.885 6.435 8.615 7.525 7.525C8.615 6.435 9.89 5.575 11.35 4.945C12.81 4.315 14.36 4 16 4C17.66 4 19.215 4.315 20.665 4.945C22.115 5.575 23.385 6.435 24.475 7.525C25.565 8.615 26.425 9.885 27.055 11.335C27.685 12.785 28 14.34 28 16C28 17.64 27.685 19.19 27.055 20.65C26.425 22.11 25.565 23.385 24.475 24.475C23.385 25.565 22.115 26.425 20.665 27.055C19.215 27.685 17.66 28 16 28ZM16 25.54C16.52 24.82 16.97 24.07 17.35 23.29C17.73 22.51 18.04 21.68 18.28 20.8H13.72C13.96 21.68 14.27 22.51 14.65 23.29C15.03 24.07 15.48 24.82 16 25.54ZM12.88 25.06C12.52 24.4 12.205 23.715 11.935 23.005C11.665 22.295 11.44 21.56 11.26 20.8H7.72C8.3 21.8 9.025 22.67 9.895 23.41C10.765 24.15 11.76 24.7 12.88 25.06ZM19.12 25.06C20.24 24.7 21.235 24.15 22.105 23.41C22.975 22.67 23.7 21.8 24.28 20.8H20.74C20.56 21.56 20.335 22.295 20.065 23.005C19.795 23.715 19.48 24.4 19.12 25.06ZM6.7 18.4H10.78C10.72 18 10.675 17.605 10.645 17.215C10.615 16.825 10.6 16.42 10.6 16C10.6 15.58 10.615 15.175 10.645 14.785C10.675 14.395 10.72 14 10.78 13.6H6.7C6.6 14 6.525 14.395 6.475 14.785C6.425 15.175 6.4 15.58 6.4 16C6.4 16.42 6.425 16.825 6.475 17.215C6.525 17.605 6.6 18 6.7 18.4ZM13.18 18.4H18.82C18.88 18 18.925 17.605 18.955 17.215C18.985 16.825 19 16.42 19 16C19 15.58 18.985 15.175 18.955 14.785C18.925 14.395 18.88 14 18.82 13.6H13.18C13.12 14 13.075 14.395 13.045 14.785C13.015 15.175 13 15.58 13 16C13 16.42 13.015 16.825 13.045 17.215C13.075 17.605 13.12 18 13.18 18.4ZM21.22 18.4H25.3C25.4 18 25.475 17.605 25.525 17.215C25.575 16.825 25.6 16.42 25.6 16C25.6 15.58 25.575 15.175 25.525 14.785C25.475 14.395 25.4 14 25.3 13.6H21.22C21.28 14 21.325 14.395 21.355 14.785C21.385 15.175 21.4 15.58 21.4 16C21.4 16.42 21.385 16.825 21.355 17.215C21.325 17.605 21.28 18 21.22 18.4ZM20.74 11.2H24.28C23.7 10.2 22.975 9.33 22.105 8.59C21.235 7.85 20.24 7.3 19.12 6.94C19.48 7.6 19.795 8.285 20.065 8.995C20.335 9.705 20.56 10.44 20.74 11.2ZM13.72 11.2H18.28C18.04 10.32 17.73 9.49 17.35 8.71C16.97 7.93 16.52 7.18 16 6.46C15.48 7.18 15.03 7.93 14.65 8.71C14.27 9.49 13.96 10.32 13.72 11.2ZM7.72 11.2H11.26C11.44 10.44 11.665 9.705 11.935 8.995C12.205 8.285 12.52 7.6 12.88 6.94C11.76 7.3 10.765 7.85 9.895 8.59C9.025 9.33 8.3 10.2 7.72 11.2Z" fill="currentColor"></path>
+</svg>
+
+
+
+
+
+
+            
+    </span>
+
+    
+
+        </button>
+    
+
+
+
+
+
+
+
+        
+    </div>
+
+            </a>
+        
+
+
+
+
+
+                    
+                </div>
+            
+    </div>
+</div>
+
+
+
+        
+    </div>
 
 
     </div>
@@ -1808,7 +2028,7 @@
     </div>
 </footer>
 
-<script src="/typo3-theme-camino/typo3temp/assets/js/dff4587fc74d34ad762dbad112486aab.js"></script>
+<script src="/typo3-theme-camino/typo3temp/assets/js/1e9b670793bb5693917252bafe764261.js"></script>
 <script type="module" src="/typo3-theme-camino/typo3/sysext/theme_camino/Resources/Public/JavaScript/main.js"></script>
 <script type="module" src="/typo3-theme-camino/typo3/sysext/theme_camino/Resources/Public/JavaScript/ThemeManager.js"></script>
 <script>
