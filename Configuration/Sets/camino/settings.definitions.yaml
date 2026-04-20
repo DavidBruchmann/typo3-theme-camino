@@ -19,20 +19,6 @@ settings:
     default: false
     type: bool
     category: camino
-  camino.darkMode.headerFooterContentColor:
-    default: 'white'
-    type: string
-    enum:
-      - white
-      - black
-    category: camino.darkMode
-  camino.darkMode.colorPriority:
-    default: 'dark-medium'
-    type: string
-    enum:
-      - dark-medium
-      - medium-dark
-    category: camino.darkMode
   camino.darkLightToggle.type:
     default: ''
     type: string
